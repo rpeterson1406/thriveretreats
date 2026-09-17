@@ -2,6 +2,8 @@ import Hero from './components/Hero'
 import TheRetreat from './components/TheRetreat'
 import Itinerary from './components/Itinerary'
 import Accommodations from './components/Accommodations'
+import Leaders from './components/Leaders'
+import ThoughtfullyDesigned from './components/ThoughtfullyDesigned'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
 import Contact from './components/Contact'
@@ -15,6 +17,8 @@ function App() {
       <TheRetreat />
       <Itinerary />
       <Accommodations />
+      <Leaders />
+      <ThoughtfullyDesigned />
       <FAQ />
       <FinalCTA />
       <Contact />

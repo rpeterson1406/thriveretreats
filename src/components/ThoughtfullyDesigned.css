@@ -1,0 +1,125 @@
+.designed {
+  background: #f7f2eb;
+  padding: clamp(4.5rem, 9vw, 7.5rem) clamp(1.25rem, 4vw, 3rem);
+  border-top: 1px solid var(--rule);
+}
+
+.designed__inner {
+  max-width: 78rem;
+  margin: 0 auto;
+}
+
+.designed__header {
+  max-width: 42rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.designed__label {
+  margin: 0 0 1rem;
+  color: var(--pink);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.designed__title {
+  margin: 0;
+  color: var(--olive);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+}
+
+.designed__accent {
+  width: 3rem;
+  height: 2px;
+  margin: 1.35rem 0 1.4rem;
+  background: var(--pink);
+}
+
+.designed__subhead {
+  margin: 0;
+  color: #3a3a3a;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.designed__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.designed__card {
+  padding: 1.35rem 1.25rem 1.4rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: rgba(253, 248, 243, 0.85);
+}
+
+.designed__icon {
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background: rgba(216, 27, 96, 0.1);
+  color: var(--pink);
+}
+
+.designed__icon svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.designed__card-title {
+  margin: 0 0 0.45rem;
+  color: var(--olive);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.designed__card-text {
+  margin: 0;
+  color: #4a4a4a;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.designed__note {
+  margin: 2rem 0 0;
+  color: #7a7570;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .designed__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .designed__grid {
+    grid-template-columns: 1fr;
+  }
+}
