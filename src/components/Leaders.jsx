@@ -1,17 +1,17 @@
 import './Leaders.css'
 
 /**
- * Leader photos — replace these files in /public/images/ when ready:
- * - leader-shannon.jpg
- * - leader-melissa.jpg
+ * Leader photos:
+ * - Shannon: /images/shannon_leader_pic.avif
+ * - Melissa: /images/mel_leader_pic.avif
  */
 const leaders = [
   {
     name: 'Shannon',
     image: {
-      src: '/images/leader-shannon.jpg',
-      label: 'leader-shannon.jpg',
-      hint: 'Photo of Shannon',
+      src: '/images/shannon_leader_pic.avif',
+      alt: 'Shannon, THRIVE Women Fitness retreat leader',
+      ready: true,
     },
     credentials: [
       'BS in Exercise Science',
@@ -29,9 +29,9 @@ const leaders = [
   {
     name: 'Melissa',
     image: {
-      src: '/images/leader-melissa.jpg',
-      label: 'leader-melissa.jpg',
-      hint: 'Photo of Melissa',
+      src: '/images/mel_leader_pic.avif',
+      alt: 'Melissa, THRIVE Women Fitness retreat leader',
+      ready: true,
     },
     credentials: [
       '3x 100K Run Finisher',
@@ -47,7 +47,19 @@ const leaders = [
   },
 ]
 
-function LeaderPhoto({ image }) {
+function LeaderPhoto({ image, name }) {
+  if (image.ready) {
+    return (
+      <div className="leaders__photo leaders__photo--filled">
+        <img
+          className="leaders__photo-img"
+          src={image.src}
+          alt={image.alt || name}
+        />
+      </div>
+    )
+  }
+
   return (
     <div
       className="leaders__photo"
@@ -76,8 +88,7 @@ function Leaders() {
         <div className="leaders__grid">
           {leaders.map((leader) => (
             <article key={leader.name} className="leaders__profile">
-              {/* Replace with the file named in leader.image.src */}
-              <LeaderPhoto image={leader.image} />
+              <LeaderPhoto image={leader.image} name={leader.name} />
 
               <div className="leaders__content">
                 <h3 className="leaders__name">{leader.name}</h3>
