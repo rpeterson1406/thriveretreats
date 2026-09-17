@@ -1,3 +1,4 @@
+import { RESERVE_MAILTO } from '../contactEmail'
 import './Hero.css'
 
 const HERO_IMAGE = '/images/hero-image.png'
@@ -117,7 +118,7 @@ function Hero() {
             ))}
           </nav>
 
-          <a className="hero__header-cta" href="#contact">
+          <a className="hero__header-cta" href={RESERVE_MAILTO}>
             Reserve Your Room
           </a>
 
@@ -142,9 +143,9 @@ function Hero() {
               Five unforgettable days of hiking, strength, restoration and
               connection — created exclusively for women 40+.
             </p>
-            <a className="hero__cta" href="#contact">
-              Reserve Your Room <span aria-hidden="true">→</span>
-            </a>
+          <a className="hero__cta" href={RESERVE_MAILTO}>
+            Reserve Your Room <span aria-hidden="true">→</span>
+          </a>
             <p className="hero__details">
               Only 7–10 Women <span aria-hidden="true">•</span> Luxury
               Accommodations <span aria-hidden="true">•</span> All Meals{' '}

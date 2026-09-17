@@ -1,4 +1,4 @@
-import { CONTACT_MAILTO } from '../contactEmail'
+import { RESERVE_MAILTO } from '../contactEmail'
 import './FinalCTA.css'
 
 function FinalCTA() {
@@ -21,8 +21,7 @@ function FinalCTA() {
           <li>Only 7–10 Women</li>
         </ul>
 
-        {/* TODO: Replace PLACEHOLDER@EMAIL.COM in src/contactEmail.js */}
-        <a className="final-cta__button" href={CONTACT_MAILTO}>
+        <a className="final-cta__button" href={RESERVE_MAILTO}>
           Reserve Your Room <span aria-hidden="true">→</span>
         </a>
       </div>

@@ -11,7 +11,6 @@ function Contact() {
         <div className="contact__accent" aria-hidden="true" />
         <p className="contact__copy">We&apos;d love to hear from you.</p>
 
-        {/* TODO: Replace PLACEHOLDER@EMAIL.COM in src/contactEmail.js */}
         <a className="contact__link" href={CONTACT_MAILTO}>
           Email Us <span aria-hidden="true">→</span>
         </a>

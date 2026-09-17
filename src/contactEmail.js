@@ -1,6 +1,10 @@
 /**
- * TODO: Replace PLACEHOLDER@EMAIL.COM with the real retreat contact email.
- * This address is used by the Final CTA and Contact "Email Us" links.
+ * Retreat contact email used by Reserve and Contact links.
  */
-export const CONTACT_EMAIL = 'PLACEHOLDER@EMAIL.COM'
+export const CONTACT_EMAIL = 'thrivewomenfitness@gmail.com'
+
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`
+
+export const RESERVE_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  'Thrive Women Retreat - Room Reservation',
+)}`
