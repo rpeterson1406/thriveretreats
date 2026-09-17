@@ -1,0 +1,108 @@
+.retreat {
+  background: var(--bg);
+  padding: clamp(4.5rem, 9vw, 7.5rem) clamp(1.25rem, 4vw, 3rem);
+}
+
+.retreat__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  max-width: 78rem;
+  margin: 0 auto;
+}
+
+.retreat__label {
+  margin: 0 0 1rem;
+  color: var(--pink);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.retreat__title {
+  margin: 0;
+  color: var(--olive);
+  font-family: var(--font-serif);
+  font-size: clamp(2.35rem, 4.4vw, 3.65rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+}
+
+.retreat__accent {
+  width: 3rem;
+  height: 2px;
+  margin: 1.35rem 0 1.75rem;
+  background: var(--pink);
+}
+
+.retreat__prose {
+  display: grid;
+  gap: 1.15rem;
+  max-width: 36rem;
+}
+
+.retreat__prose p {
+  margin: 0;
+  color: #3a3a3a;
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.retreat__media {
+  min-width: 0;
+}
+
+.retreat__image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: clamp(22rem, 42vw, 32rem);
+  padding: 2rem;
+  border: 1px solid var(--rule);
+  background:
+    linear-gradient(145deg, rgba(62, 74, 52, 0.06), rgba(216, 27, 96, 0.05)),
+    #f3ebe3;
+  text-align: center;
+}
+
+.retreat__image-label {
+  color: var(--olive);
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.retreat__image-hint {
+  max-width: 16rem;
+  color: #7a7570;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .retreat {
+    padding: clamp(3.5rem, 10vw, 5rem) clamp(1.25rem, 5vw, 2rem);
+  }
+
+  .retreat__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .retreat__image-placeholder {
+    min-height: 20rem;
+  }
+}

@@ -1,0 +1,101 @@
+.final-cta {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(253, 248, 243, 0.96) 0%,
+      rgba(247, 242, 235, 0.98) 100%
+    ),
+    var(--bg);
+  padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 4vw, 3rem);
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.final-cta__inner {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.final-cta__label {
+  margin: 0 0 1.1rem;
+  color: var(--pink);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.final-cta__title {
+  margin: 0;
+  color: var(--olive);
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.final-cta__accent {
+  width: 3rem;
+  height: 2px;
+  margin: 1.5rem auto 1.6rem;
+  background: var(--pink);
+}
+
+.final-cta__copy {
+  margin: 0 auto 2rem;
+  max-width: 32rem;
+  color: #3a3a3a;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.final-cta__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem 1.75rem;
+  margin: 0 0 2.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.final-cta__meta li {
+  color: var(--olive);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.final-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 1rem 1.85rem;
+  border-radius: 999px;
+  background: var(--pink);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.final-cta__button span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .final-cta__meta {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+}

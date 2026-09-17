@@ -1,0 +1,116 @@
+.site-footer {
+  background: var(--olive);
+  color: #f7f2eb;
+  padding: clamp(3rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem)
+    clamp(2rem, 4vw, 2.75rem);
+}
+
+.site-footer__inner {
+  max-width: 78rem;
+  margin: 0 auto;
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  margin-bottom: 2.25rem;
+}
+
+.site-footer__logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.site-footer__logo-thrive {
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding-right: 0.28em;
+}
+
+.site-footer__logo-sub {
+  margin-top: 0.35rem;
+  color: rgba(247, 242, 235, 0.78);
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.site-footer__tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  margin: 0;
+  color: rgba(247, 242, 235, 0.7);
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.6rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(247, 242, 235, 0.18);
+  border-bottom: 1px solid rgba(247, 242, 235, 0.18);
+}
+
+.site-footer__nav a {
+  color: rgba(247, 242, 235, 0.9);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.site-footer__copyright {
+  margin: 0;
+  color: rgba(247, 242, 235, 0.65);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.site-footer__external {
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .site-footer__tagline {
+    align-items: flex-start;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
