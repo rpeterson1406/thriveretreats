@@ -1,190 +1,127 @@
 import './ThoughtfullyDesigned.css'
 
-const benefits = [
+const DESERT_IMAGE = '/images/whats_included_desert.png?v=9'
+
+const stroke = {
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 2.35,
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round',
+}
+
+const inclusions = [
   {
-    title: 'Curated hiking adventures',
-    text: 'Through Tucson and the Sonoran Desert’s most breathtaking landscapes.',
+    title: 'Guided Hikes',
+    text: 'Expert-led hikes on iconic Tucson trails, with routes chosen for adventure, beauty and the right level of challenge.',
+    color: 'olive',
+    iconAsset: true,
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M3 19L9.5 8l3.2 5.2L16 7l5 12H3z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
+      <img
+        src="/images/guided-hikes-icon.png"
+        alt=""
+        width={800}
+        height={800}
+        decoding="async"
+      />
+    ),
+  },
+  {
+    title: 'Movement & Recovery',
+    text: 'Thoughtful strength work, mobility, stretching and recovery sessions to keep you feeling strong and ready for each day.',
+    color: 'pink',
+    icon: (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <path {...stroke} d="M10 18v12M14 14v20M34 14v20M38 18v12M14 24h20" />
+        <path {...stroke} d="M8 20v8M40 20v8" />
       </svg>
     ),
   },
   {
-    title: 'Limited to 10 women',
-    text: 'An intentionally small group for a more personalized experience.',
+    title: 'Luxury Accommodations',
+    text: 'Five nights in a beautiful private retreat home with spacious rooms, en-suite bathrooms, a pool, hot tub and stunning desert views.',
+    color: 'olive',
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M12 20s-7-4.4-7-9.2A3.8 3.8 0 0 1 12 7.5a3.8 3.8 0 0 1 7 3.3C19 15.6 12 20 12 20z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <path {...stroke} d="M8 22L24 10l16 12v16a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V22z" />
+        <path {...stroke} d="M20 40V28h8v12" />
+        <path {...stroke} d="M30 14v-4h5v8" />
       </svg>
     ),
   },
   {
-    title: 'Relaxing accommodations',
-    text: 'A beautiful private estate selected specifically for the THRIVE retreat experience.',
+    title: 'All Meals & Snacks',
+    text: 'Delicious, nutritious meals and snacks prepared for you throughout the retreat, with a focus on fueling your adventures.',
+    color: 'pink',
+    iconAsset: true,
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
+      <img
+        src="/images/meals-snacks-icon.png"
+        alt=""
+        width={800}
+        height={800}
+        decoding="async"
+      />
+    ),
+  },
+  {
+    title: 'A Supportive Community',
+    text: 'Share the experience with 7–10 like-minded women who encourage, inspire and get what this stage of life is all about.',
+    color: 'pink',
+    icon: (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        {/* Three people — middle figure larger/taller like the reference */}
+        <circle cx="10" cy="16" r="3.6" {...stroke} />
+        <path {...stroke} d="M4.5 38c0.7-7.5 3.4-11 5.5-11s4.8 3.5 5.5 11" />
+        <circle cx="24" cy="11.5" r="4.8" {...stroke} />
+        <path {...stroke} d="M16.5 38c0.9-9.5 4.5-14.5 7.5-14.5s6.6 5 7.5 14.5" />
+        <circle cx="38" cy="16" r="3.6" {...stroke} />
+        <path {...stroke} d="M32.5 38c0.7-7.5 3.4-11 5.5-11s4.8 3.5 5.5 11" />
       </svg>
     ),
   },
   {
-    title: 'Meals & snacks',
-    text: 'Nutritious, delicious meals and snacks throughout the retreat.',
+    title: 'Transportation',
+    text: 'All transportation during the retreat, including shuttles to trailheads and group activities.',
+    color: 'olive',
+    iconAsset: true,
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M8 3v8a3 3 0 0 0 3 3h0V3M16 3v18M16 3c2.2 2.5 2.2 6 0 8.5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <img
+        src="/images/transportation-icon.png"
+        alt=""
+        width={800}
+        height={800}
+        decoding="async"
+      />
+    ),
+  },
+  {
+    title: 'Airport Pickup & Drop-Off',
+    text: 'We’ve got you covered with group airport transportation during designated windows (see FAQ for details).',
+    color: 'pink',
+    icon: (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        {/* Material-style plane, rotated to point up-right */}
+        <g transform="translate(24 24) rotate(-48) scale(1.7) translate(-11.5 -12)">
+          <path
+            {...stroke}
+            strokeWidth={1.45}
+            d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9L2 14v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+          />
+        </g>
       </svg>
     ),
   },
   {
-    title: 'Guided recovery sessions',
-    text: 'Stretching, mobility, recovery, and mindful movement to support your body.',
+    title: 'THRIVE Extras',
+    text: 'Park fees, guided experiences, retreat materials, surprise goodies and all the thoughtful details that make this experience seamless.',
+    color: 'olive',
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <path
-          d="M12 8v4l2.5 2.5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Expert guidance & support',
-    text: 'Retreat leaders Shannon and Melissa with you every step of the way.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="8" cy="8" r="2.2" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="16" cy="8" r="2.2" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <path
-          d="M4.5 19c.4-3 2-4.8 3.5-4.8S11 16 11.2 19M12.8 19c.4-3 2-4.8 3.5-4.8S19.5 16 20 19"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Transportation throughout',
-    text: 'Getting you to and from adventures during the retreat week.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M4 16V8.5A2.5 2.5 0 0 1 6.5 6h11A2.5 2.5 0 0 1 20 8.5V16M4 16h16M6.5 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Park & trail fees included',
-    text: 'All park and hiking entrance fees covered for scheduled adventures.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M4 19l5-9 3 5 2.5-4L20 19H4zM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Travel planning assistance',
-    text: 'Pre-retreat support to help you plan your trip with confidence.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M10.5 12.5L4 10l16-6-6 16-2.5-7.5z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Airport transportation',
-    text: 'Complimentary airport transfers during designated arrival and departure windows.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M5 17h14M7 17l1.2-7h7.6L17 17M9 10V7.5A1.5 1.5 0 0 1 10.5 6h3A1.5 1.5 0 0 1 15 7.5V10"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <circle cx="8.5" cy="17" r="1.2" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="15.5" cy="17" r="1.2" fill="none" stroke="currentColor" strokeWidth="1.5" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Suggested fitness training',
-    text: 'Guidance to help you feel prepared and confident before you arrive.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M6 9v6M8.5 7v10M15.5 7v10M18 9v6M8.5 12h7"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Comprehensive packing guide',
-    text: 'A clear packing list so you know exactly what to bring.',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="5" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        <path
-          d="M8 8h8M8 12h8M8 16h5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="12" y="8" width="24" height="32" rx="2" {...stroke} />
+        <path {...stroke} d="M18 6h12v4H18z" />
+        <path {...stroke} d="M17 18l2.5 2.5L24 16M17 26l2.5 2.5L24 24M17 34l2.5 2.5L24 32" />
+        <path {...stroke} d="M27 19h6M27 27h6M27 35h6" />
       </svg>
     ),
   },
@@ -201,28 +138,49 @@ function ThoughtfullyDesigned() {
         <header className="designed__header">
           <p className="designed__label">What&apos;s Included</p>
           <h2 id="designed-heading" className="designed__title">
-            Your Retreat, Thoughtfully Designed
+            We Take Care of the Details
           </h2>
-          <div className="designed__accent" aria-hidden="true" />
           <p className="designed__subhead">
-            Every detail has been carefully planned so you can focus on what
-            matters most — enjoying every moment.
+            So you can focus on what matters most — moving, connecting, and
+            enjoying every moment.
           </p>
+          <div className="designed__accent" aria-hidden="true" />
         </header>
 
         <ul className="designed__grid">
-          {benefits.map((item) => (
-            <li key={item.title} className="designed__card">
-              <span className="designed__icon">{item.icon}</span>
-              <h3 className="designed__card-title">{item.title}</h3>
-              <p className="designed__card-text">{item.text}</p>
+          {inclusions.map((item) => (
+            <li key={item.title} className="designed__item">
+              <span
+                className={[
+                  'designed__icon',
+                  `designed__icon--${item.color}`,
+                  item.iconAsset ? 'designed__icon--asset' : '',
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
+              >
+                {item.icon}
+              </span>
+              <h3 className={`designed__item-title designed__item-title--${item.color}`}>
+                {item.title}
+              </h3>
+              <p className="designed__item-text">{item.text}</p>
             </li>
           ))}
         </ul>
+      </div>
 
-        <p className="designed__note">
-          Airfare &amp; optional massages are not included.
-        </p>
+      <div className="designed__closing">
+        <p className="designed__closing-text">All included. All for you.</p>
+        <div className="designed__closing-accent" aria-hidden="true" />
+      </div>
+
+      <div className="designed__landscape" aria-hidden="true">
+        <img
+          className="designed__landscape-image"
+          src={DESERT_IMAGE}
+          alt=""
+        />
       </div>
     </section>
   )

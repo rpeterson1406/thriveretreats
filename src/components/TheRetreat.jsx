@@ -43,20 +43,13 @@ function TheRetreat() {
         </div>
 
         <div className="retreat__media">
-          {/*
-            IMAGE PLACEHOLDER — replace with a real retreat photograph.
-            Suggested file: /public/images/retreat-intro.jpg
-          */}
-          <div
-            className="retreat__image-placeholder"
-            role="img"
-            aria-label="Retreat photo coming soon"
-          >
-            <span className="retreat__image-label">Retreat Photo</span>
-            <span className="retreat__image-hint">
-              Replace this placeholder with the retreat image
-            </span>
-          </div>
+          <img
+            className="retreat__image"
+            src="/images/retreat_hike_photo1.avif"
+            alt="Women hiking together on a THRIVE retreat"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>

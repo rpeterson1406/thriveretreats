@@ -113,6 +113,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 1rem;
+  margin-right: 4.75rem;
   padding: 0.7rem 1.3rem;
   border-radius: 999px;
   background: var(--pink);
@@ -125,16 +126,18 @@
 }
 
 .hero__brand-tagline {
+  position: absolute;
+  top: 1rem;
+  right: clamp(0.35rem, 1.2vw, 0.85rem);
+  z-index: 3;
   display: flex;
-  flex: 0 0 auto;
   flex-direction: column;
   align-items: flex-end;
-  align-self: flex-start;
   gap: 0.15rem;
-  margin: 0.15rem 0 0 0.9rem;
-  color: #6a6a6a;
+  margin: 0;
+  color: #2a2a2a;
   font-size: 0.45rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.2em;
   line-height: 1.2;
   text-transform: uppercase;
@@ -180,11 +183,15 @@
   z-index: 1;
   margin: 0.55em 0 0;
   color: var(--pink);
-  font-family: var(--font-script);
-  font-size: clamp(3.3rem, 6.6vw, 5.75rem);
+  font-family: 'Great Vibes', var(--font-script), cursive;
+  font-size: clamp(3.1rem, 6.2vw, 5.4rem);
   font-weight: 400;
-  line-height: 0.9;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
   white-space: nowrap;
+  text-shadow:
+    0 1px 0 rgba(253, 248, 243, 0.7),
+    0 0 14px rgba(253, 248, 243, 0.45);
 }
 
 .hero__body {
@@ -256,24 +263,29 @@
 
 .hero__side-script {
   position: absolute;
-  right: clamp(2rem, 9vw, 8rem);
+  right: clamp(0.5rem, 2.5vw, 2rem);
   top: 46%;
   z-index: 1;
   margin: 0;
-  color: var(--olive);
-  font-family: var(--font-script);
+  color: var(--pink);
+  font-family: 'Great Vibes', var(--font-script), cursive;
   font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-weight: 700;
   line-height: 1.05;
   text-align: center;
   transform: translateY(-50%) rotate(-8deg);
+  text-shadow:
+    0 1px 0 rgba(253, 248, 243, 0.75),
+    0 0 12px rgba(253, 248, 243, 0.5);
 }
 
 .hero__heart {
   display: block;
   margin-top: 0.15rem;
-  color: var(--olive);
+  color: var(--pink);
   font-family: Georgia, serif;
   font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .hero__scroll {
@@ -399,11 +411,12 @@
 
   .hero__header-cta {
     margin-left: auto;
+    margin-right: 4.5rem;
   }
 
   .hero__brand-tagline {
-    align-self: center;
-    margin-top: 0;
+    top: 0.85rem;
+    right: 0.5rem;
   }
 
   .hero__title,

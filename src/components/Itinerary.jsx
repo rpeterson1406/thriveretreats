@@ -74,20 +74,13 @@ function Itinerary() {
           </div>
 
           <div className="itinerary__media">
-            {/*
-              IMAGE PLACEHOLDER — replace with a hiking/retreat photograph.
-              Suggested file: /public/images/itinerary-hike.jpg
-            */}
-            <div
-              className="itinerary__image-placeholder"
-              role="img"
-              aria-label="Itinerary photo coming soon"
-            >
-              <span className="itinerary__image-label">Hiking Photo</span>
-              <span className="itinerary__image-hint">
-                Replace this placeholder with a retreat trail image
-              </span>
-            </div>
+            <img
+              className="itinerary__image"
+              src="/images/hike_explore_tucson.png"
+              alt="Women exploring Tucson desert trails on a THRIVE hike"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </header>
 

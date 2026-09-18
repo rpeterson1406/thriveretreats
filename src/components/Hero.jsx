@@ -1,4 +1,4 @@
-import { RESERVE_MAILTO } from '../contactEmail'
+import { CONTACT_MAILTO, RESERVE_MAILTO } from '../contactEmail'
 import './Hero.css'
 
 const HERO_IMAGE = '/images/hero-image.png'
@@ -118,8 +118,8 @@ function Hero() {
             ))}
           </nav>
 
-          <a className="hero__header-cta" href={RESERVE_MAILTO}>
-            Reserve Your Room
+          <a className="hero__header-cta" href={CONTACT_MAILTO}>
+            Questions? Let&apos;s Chat
           </a>
 
           <p className="hero__brand-tagline">

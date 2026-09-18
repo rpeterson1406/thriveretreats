@@ -22,7 +22,7 @@ function FinalCTA() {
         </ul>
 
         <a className="final-cta__button" href={RESERVE_MAILTO}>
-          Reserve Your Room <span aria-hidden="true">→</span>
+          Ask Us About the Retreat <span aria-hidden="true">→</span>
         </a>
       </div>
     </section>
