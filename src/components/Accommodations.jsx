@@ -1,32 +1,28 @@
 import './Accommodations.css'
 
 /**
- * Property images — replace these files in /public/images/ when ready:
- * - accommodation-main.jpg
- * - accommodation-pool.jpg
- * - accommodation-bedroom.jpg
- * - accommodation-patio.jpg
+ * Property images:
+ * - /images/House_main_upscaled.png
+ * - /images/pool1.avif
+ * - /images/livingroom.avif
+ * - /images/house_patio_pic.avif
  */
 const propertyImages = {
   main: {
-    src: '/images/accommodation-main.jpg',
-    label: 'accommodation-main.jpg',
-    hint: 'Primary estate exterior or great room',
+    src: '/images/House_main_upscaled.png',
+    alt: 'Private luxury retreat estate in the Sonoran Desert',
   },
   pool: {
-    src: '/images/accommodation-pool.jpg',
-    label: 'accommodation-pool.jpg',
-    hint: 'Heated pool & spa',
+    src: '/images/pool1.avif',
+    alt: 'Heated swimming pool at the retreat estate',
   },
   bedroom: {
-    src: '/images/accommodation-bedroom.jpg',
-    label: 'accommodation-bedroom.jpg',
-    hint: 'En-suite bedroom suite',
+    src: '/images/livingroom.avif',
+    alt: 'Living room and shared gathering space at the retreat estate',
   },
   patio: {
-    src: '/images/accommodation-patio.jpg',
-    label: 'accommodation-patio.jpg',
-    hint: 'Outdoor patio with desert views',
+    src: '/images/house_patio_pic.avif',
+    alt: 'Outdoor patio with desert and mountain views',
   },
 }
 
@@ -43,16 +39,10 @@ const propertyHighlights = [
   'Private gated desert setting',
 ]
 
-function ImagePlaceholder({ image, variant = 'secondary' }) {
+function PropertyImage({ image, variant = 'secondary' }) {
   return (
-    <div
-      className={`stay__placeholder stay__placeholder--${variant}`}
-      role="img"
-      aria-label={`${image.hint} — photo coming soon`}
-      data-image={image.src}
-    >
-      <span className="stay__placeholder-label">{image.label}</span>
-      <span className="stay__placeholder-hint">{image.hint}</span>
+    <div className={`stay__photo stay__photo--${variant}`}>
+      <img className="stay__photo-img" src={image.src} alt={image.alt} />
     </div>
   )
 }
@@ -78,18 +68,14 @@ function Accommodations() {
         </header>
 
         <div className="stay__gallery">
-          {/* Replace with /public/images/accommodation-main.jpg */}
           <div className="stay__gallery-main">
-            <ImagePlaceholder image={propertyImages.main} variant="main" />
+            <PropertyImage image={propertyImages.main} variant="main" />
           </div>
 
           <div className="stay__gallery-side">
-            {/* Replace with /public/images/accommodation-pool.jpg */}
-            <ImagePlaceholder image={propertyImages.pool} />
-            {/* Replace with /public/images/accommodation-bedroom.jpg */}
-            <ImagePlaceholder image={propertyImages.bedroom} />
-            {/* Replace with /public/images/accommodation-patio.jpg */}
-            <ImagePlaceholder image={propertyImages.patio} />
+            <PropertyImage image={propertyImages.pool} />
+            <PropertyImage image={propertyImages.bedroom} />
+            <PropertyImage image={propertyImages.patio} />
           </div>
         </div>
 
