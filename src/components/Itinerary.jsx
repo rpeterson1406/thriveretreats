@@ -85,23 +85,37 @@ function Itinerary() {
         </header>
 
         <ol className="itinerary__timeline">
-          {itineraryDays.map((item) => (
-            <li key={item.day} className="itinerary__day">
-              <div className="itinerary__day-marker" aria-hidden="true">
-                <span className="itinerary__day-number">{item.day}</span>
-              </div>
+          {itineraryDays.map((item) => {
+            const activitySlots = Array.from({ length: 4 }, (_, index) => item.activities[index] ?? null)
 
-              <div className="itinerary__day-content">
-                <p className="itinerary__day-label">Day {Number(item.day)}</p>
-                <h3 className="itinerary__day-title">{item.title}</h3>
-                <ul className="itinerary__activities">
-                  {item.activities.map((activity) => (
-                    <li key={activity}>{activity}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
+            return (
+              <li key={item.day} className="itinerary__day">
+                <div className="itinerary__day-marker" aria-hidden="true">
+                  <span className="itinerary__day-number">{item.day}</span>
+                </div>
+
+                <div className="itinerary__day-content">
+                  <p className="itinerary__day-label">Day {Number(item.day)}</p>
+                  <h3 className="itinerary__day-title">{item.title}</h3>
+                  <ul className="itinerary__activities">
+                    {activitySlots.map((activity, index) => (
+                      <li
+                        key={activity ?? `${item.day}-slot-${index}`}
+                        className={
+                          activity
+                            ? undefined
+                            : 'itinerary__activities-item--empty'
+                        }
+                        aria-hidden={activity ? undefined : true}
+                      >
+                        {activity}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            )
+          })}
         </ol>
       </div>
     </section>

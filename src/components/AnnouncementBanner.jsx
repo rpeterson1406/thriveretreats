@@ -1,37 +1,38 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './AnnouncementBanner.css'
 
 const AUTO_DISMISS_MS = 4000
 const FADE_MS = 420
 
+/** Survives React Strict Mode remount so the 4s clock isn't reset. */
+let autoDismissStartedAt = 0
+
 function AnnouncementBanner() {
-  const [mounted, setMounted] = useState(true)
-  const [leaving, setLeaving] = useState(false)
-  const leavingRef = useRef(false)
-  const timerRef = useRef(null)
-  const fadeRef = useRef(null)
+  const [phase, setPhase] = useState('open')
 
   useEffect(() => {
-    if (typeof AUTO_DISMISS_MS === 'number' && AUTO_DISMISS_MS > 0) {
-      timerRef.current = window.setTimeout(() => {
-        dismiss()
-      }, AUTO_DISMISS_MS)
+    if (typeof AUTO_DISMISS_MS !== 'number' || AUTO_DISMISS_MS <= 0) return
+
+    if (!autoDismissStartedAt) {
+      autoDismissStartedAt = Date.now()
     }
 
-    return () => {
-      window.clearTimeout(timerRef.current)
-      window.clearTimeout(fadeRef.current)
-    }
-    // Mount-only auto-dismiss
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const wait = Math.max(0, AUTO_DISMISS_MS - (Date.now() - autoDismissStartedAt))
+    const timerId = window.setTimeout(() => {
+      setPhase((current) => (current === 'open' ? 'leaving' : current))
+    }, wait)
+
+    return () => window.clearTimeout(timerId)
   }, [])
 
+  useEffect(() => {
+    if (phase !== 'leaving') return
+    const fadeId = window.setTimeout(() => setPhase('gone'), FADE_MS)
+    return () => window.clearTimeout(fadeId)
+  }, [phase])
+
   function dismiss() {
-    if (leavingRef.current) return
-    leavingRef.current = true
-    window.clearTimeout(timerRef.current)
-    setLeaving(true)
-    fadeRef.current = window.setTimeout(() => setMounted(false), FADE_MS)
+    setPhase((current) => (current === 'open' ? 'leaving' : current))
   }
 
   function handleExplore(event) {
@@ -43,11 +44,11 @@ function AnnouncementBanner() {
     }
   }
 
-  if (!mounted) return null
+  if (phase === 'gone') return null
 
   return (
     <div
-      className={['announce', leaving ? 'announce--leaving' : '']
+      className={['announce', phase === 'leaving' ? 'announce--leaving' : '']
         .filter(Boolean)
         .join(' ')}
       role="dialog"
