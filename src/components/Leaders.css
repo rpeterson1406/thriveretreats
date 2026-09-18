@@ -11,7 +11,8 @@
 
 .leaders__header {
   max-width: 40rem;
-  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+  margin: 0 auto clamp(2.5rem, 5vw, 3.75rem);
+  text-align: center;
 }
 
 .leaders__label {
@@ -37,18 +38,20 @@
 .leaders__accent {
   width: 3rem;
   height: 2px;
-  margin: 1.35rem 0 0;
+  margin: 1.35rem auto 0;
   background: var(--pink);
 }
 
 .leaders__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2.25rem, 4.5vw, 3.25rem);
 }
 
 .leaders__media {
+  width: min(100%, 55vw);
+  max-width: 56rem;
   min-width: 0;
   border-radius: 4px;
   overflow: hidden;
@@ -64,8 +67,9 @@
 }
 
 .leaders__content {
+  width: min(100%, 42rem);
   min-width: 0;
-  padding-top: 0.25rem;
+  text-align: center;
 }
 
 .leaders__person--divided {
@@ -95,7 +99,8 @@
 }
 
 .leaders__bio {
-  margin: 0 0 1.15rem;
+  margin: 0 auto 1.15rem;
+  max-width: 38rem;
   color: #3a3a3a;
   font-family: var(--font-sans);
   font-size: 0.98rem;
@@ -104,9 +109,11 @@
 }
 
 .leaders__credentials {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: left;
 }
 
 .leaders__credentials li {
@@ -129,11 +136,4 @@
   height: 0.35rem;
   border-radius: 50%;
   background: var(--pink);
-}
-
-@media (max-width: 900px) {
-  .leaders__layout {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-  }
 }
