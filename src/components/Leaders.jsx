@@ -1,77 +1,47 @@
 import './Leaders.css'
 
+const SHARED_PHOTO = '/images/two_leaders_pic.jpeg?v=2'
+
 /**
- * Leader photos:
- * - Shannon: /images/shannon_leader_pic.avif
- * - Melissa: /images/mel_leader_pic.avif
+ * Bios and credentials summarized ONLY from the previous Leaders section content.
+ * Shannon credentials selected:
+ * - Creator of THRIVE Women Fitness
+ * - Leading women's fitness retreats since 2017
+ * - BS in Exercise Science
+ * - Menopause Fitness Specialist
+ * - 3x Ironman World Championship Finisher
+ *
+ * Melissa credentials selected:
+ * - Expert Desert Hiking Guide
+ * - Outdoor Adventure Specialist
+ * - 2x Ironman Finisher
+ * - 3x 100K Run Finisher
  */
 const leaders = [
   {
     name: 'Shannon',
-    image: {
-      src: '/images/shannon_leader_pic.avif',
-      alt: 'Shannon, THRIVE Women Fitness retreat leader',
-      ready: true,
-    },
+    role: 'Founder, THRIVE Women Fitness',
+    bio: 'Shannon created THRIVE Women Fitness and has been leading women\'s fitness retreats since 2017. With more than 30 years coaching women, her focus is optimizing health for women 40+ through exercise, nutrition, hormonal health, and mindset. An accomplished hiker—including Grand Canyon Rim-to-Rim, the Enchantments, and Havasupai—she shares the benefits of moving in nature\'s gym and the spiritual reset of getting off the grid.',
     credentials: [
-      'BS in Exercise Science',
-      '30+ Years Coaching Women',
-      'Menopause Fitness Specialist',
-      '3x Ironman World Championship Finisher',
       'Creator of THRIVE Women Fitness',
       'Leading women\'s fitness retreats since 2017',
-    ],
-    bio: [
-      'Shannon has completed epic hikes including Grand Canyon Rim-to-Rim, the Enchantments, and Havasupai. She now shares the benefits of physical activity in nature\'s gym and the spiritual reset of getting off the grid.',
-      'Her mission is optimizing health for women 40+ by integrating exercise, nutrition, hormonal health, and mindset.',
+      'BS in Exercise Science',
+      'Menopause Fitness Specialist',
+      '3x Ironman World Championship Finisher',
     ],
   },
   {
     name: 'Melissa',
-    image: {
-      src: '/images/mel_leader_pic.avif',
-      alt: 'Melissa, THRIVE Women Fitness retreat leader',
-      ready: true,
-    },
+    role: 'Retreat Co-Leader',
+    bio: 'Melissa brings endurance athletics and desert outdoor expertise to the retreat as co-leader. A two-time Ironman finisher and three-time 100K run finisher, she is also an expert desert hiking guide and outdoor adventure specialist. After a career in tech, she is following her passions for fitness, food, wine, travel, and the meaningful connections that form when people experience adventure together—and looks forward to sharing that with retreat guests.',
     credentials: [
-      '3x 100K Run Finisher',
-      '2x Ironman Finisher',
       'Expert Desert Hiking Guide',
-      'Passionate women\'s health advocate',
       'Outdoor Adventure Specialist',
-    ],
-    bio: [
-      'Mel spent her career in tech and is now shifting toward her real passions: fitness, food, wine, travel, and the meaningful connections made between people when experiencing them.',
-      'She made the Coachella Valley her second home in 2020 and looks forward to sharing this amazing place with retreat guests.',
+      '2x Ironman Finisher',
+      '3x 100K Run Finisher',
     ],
   },
 ]
-
-function LeaderPhoto({ image, name }) {
-  if (image.ready) {
-    return (
-      <div className="leaders__photo leaders__photo--filled">
-        <img
-          className="leaders__photo-img"
-          src={image.src}
-          alt={image.alt || name}
-        />
-      </div>
-    )
-  }
-
-  return (
-    <div
-      className="leaders__photo"
-      role="img"
-      aria-label={`${image.hint} — coming soon`}
-      data-image={image.src}
-    >
-      <span className="leaders__photo-label">{image.label}</span>
-      <span className="leaders__photo-hint">{image.hint}</span>
-    </div>
-  )
-}
 
 function Leaders() {
   return (
@@ -80,35 +50,37 @@ function Leaders() {
         <header className="leaders__header">
           <p className="leaders__label">Your Guides</p>
           <h2 id="leaders-heading" className="leaders__title">
-            Meet Your Leaders
+            Meet Your Retreat Leaders
           </h2>
           <div className="leaders__accent" aria-hidden="true" />
         </header>
 
-        <div className="leaders__grid">
-          {leaders.map((leader) => (
-            <article key={leader.name} className="leaders__profile">
-              <LeaderPhoto image={leader.image} name={leader.name} />
+        <div className="leaders__layout">
+          <div className="leaders__media">
+            <img
+              className="leaders__shared-photo"
+              src={SHARED_PHOTO}
+              alt="Shannon and Melissa, THRIVE Women Fitness retreat leaders"
+            />
+          </div>
 
-              <div className="leaders__content">
+          <div className="leaders__content">
+            {leaders.map((leader, index) => (
+              <article
+                key={leader.name}
+                className={`leaders__person${index > 0 ? ' leaders__person--divided' : ''}`}
+              >
                 <h3 className="leaders__name">{leader.name}</h3>
-
+                <p className="leaders__role">{leader.role}</p>
+                <p className="leaders__bio">{leader.bio}</p>
                 <ul className="leaders__credentials">
                   {leader.credentials.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-
-                <div className="leaders__divider" aria-hidden="true" />
-
-                <div className="leaders__bio">
-                  {leader.bio.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
