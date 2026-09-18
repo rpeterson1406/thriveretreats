@@ -5,7 +5,6 @@ const SHARED_PHOTO = '/images/two_leaders_pic.jpeg?v=2'
 /**
  * Bios and credentials summarized ONLY from the previous Leaders section content.
  * Shannon credentials selected:
- * - Creator of THRIVE Women Fitness
  * - Leading women's fitness retreats since 2017
  * - BS in Exercise Science
  * - Menopause Fitness Specialist
@@ -23,7 +22,6 @@ const leaders = [
     role: 'Founder, THRIVE Women Fitness',
     bio: 'Shannon created THRIVE Women Fitness and has been leading women\'s fitness retreats since 2017. With more than 30 years coaching women, her focus is optimizing health for women 40+ through exercise, nutrition, hormonal health, and mindset. An accomplished hiker—including Grand Canyon Rim-to-Rim, the Enchantments, and Havasupai—she shares the benefits of moving in nature\'s gym and the spiritual reset of getting off the grid.',
     credentials: [
-      'Creator of THRIVE Women Fitness',
       'Leading women\'s fitness retreats since 2017',
       'BS in Exercise Science',
       'Menopause Fitness Specialist',

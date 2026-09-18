@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './AnnouncementBanner.css'
 
-const AUTO_DISMISS_MS = null
+const AUTO_DISMISS_MS = 4000
 const FADE_MS = 420
 
 function AnnouncementBanner() {

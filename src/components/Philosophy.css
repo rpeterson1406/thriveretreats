@@ -1,6 +1,6 @@
 .philosophy {
   background: var(--bg);
-  padding: clamp(4.5rem, 9vw, 7.5rem) 0;
+  padding: clamp(3rem, 6vw, 5rem) 0;
   border-top: 1px solid var(--rule);
 }
 

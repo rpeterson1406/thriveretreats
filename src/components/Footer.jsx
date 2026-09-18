@@ -5,7 +5,6 @@ const footerLinks = [
   { href: '#itinerary', label: 'Itinerary' },
   { href: '#accommodations', label: 'Accommodations' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#contact', label: 'Contact' },
 ]
 
 function Footer() {

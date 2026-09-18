@@ -1,6 +1,6 @@
 import './ThoughtfullyDesigned.css'
 
-const DESERT_IMAGE = '/images/whats_included_desert.png?v=9'
+const DESERT_IMAGE = '/images/whats_included_desert.avif'
 
 const stroke = {
   fill: 'none',

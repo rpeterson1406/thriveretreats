@@ -76,7 +76,7 @@ function Itinerary() {
           <div className="itinerary__media">
             <img
               className="itinerary__image"
-              src="/images/hike_explore_tucson.png"
+              src="/images/hike_explore_tucson.avif"
               alt="Women exploring Tucson desert trails on a THRIVE hike"
               loading="lazy"
               decoding="async"

@@ -9,7 +9,6 @@ import ThoughtfullyDesigned from './components/ThoughtfullyDesigned'
 import BedroomsPricing from './components/BedroomsPricing'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -28,7 +27,6 @@ function App() {
         <BedroomsPricing />
         <FAQ />
         <FinalCTA />
-        <Contact />
         <Footer />
       </main>
     </>

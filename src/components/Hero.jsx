@@ -1,14 +1,13 @@
 import { CONTACT_MAILTO, RESERVE_MAILTO } from '../contactEmail'
 import './Hero.css'
 
-const HERO_IMAGE = '/images/hero-image.png'
+const HERO_IMAGE = '/images/hero-image.avif'
 
 const navLinks = [
   { href: '#the-retreat', label: 'The Retreat' },
   { href: '#itinerary', label: 'Itinerary' },
   { href: '#accommodations', label: 'Accommodations' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#contact', label: 'Contact' },
 ]
 
 const features = [

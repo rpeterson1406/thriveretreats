@@ -2,14 +2,14 @@ import './Accommodations.css'
 
 /**
  * Property images:
- * - /images/House_main_upscaled.png
+ * - /images/house_main.avif
  * - /images/pool1.avif
  * - /images/livingroom.avif
  * - /images/house_patio_pic.avif
  */
 const propertyImages = {
   main: {
-    src: '/images/House_main_upscaled.png',
+    src: '/images/house_main.avif',
     alt: 'Private luxury retreat estate in the Sonoran Desert',
   },
   pool: {
