@@ -41,7 +41,7 @@
 
 .retreat__prose {
   display: grid;
-  gap: 1.15rem;
+  gap: 1.25rem;
   max-width: 36rem;
 }
 
@@ -52,6 +52,26 @@
   font-size: 1.02rem;
   font-weight: 400;
   line-height: 1.7;
+}
+
+.retreat__prose strong {
+  color: var(--olive);
+  font-weight: 700;
+}
+
+.retreat__closing {
+  margin: 1.75rem 0 0;
+  max-width: 36rem;
+  color: var(--olive);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.retreat__closing-accent {
+  color: var(--pink);
 }
 
 .retreat__media {

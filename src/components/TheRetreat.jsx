@@ -14,25 +14,32 @@ function TheRetreat() {
           <div className="retreat__accent" aria-hidden="true" />
 
           <div className="retreat__prose">
+            <p>There&apos;s a reason we keep THRIVE retreats small.</p>
             <p>
-              This is an intimate women&apos;s hiking and fitness retreat created
-              exclusively for women 40+. Over five days and four nights, you&apos;ll
-              move through guided outdoor adventures, thoughtful strength work,
-              and restorative downtime designed to help you feel strong, steady,
-              and deeply connected.
+              With just <strong>7–10 women</strong>, you&apos;re not one face in
+              a crowd. There&apos;s time to get to know one another, space for
+              individual attention, and the flexibility to move through each day
+              as a group rather than following a rigid tour schedule.
             </p>
             <p>
-              With only 7–10 women in the group, every moment feels personal.
-              Expect luxurious accommodations, nourishing meals included, and a
-              pace that balances challenge with room to breathe — so you can
-              return home clearer, brighter, and more yourself.
+              On the trail, that means encouragement when you need it, leaders
+              who know how you&apos;re doing, and a pace that allows you to
+              challenge yourself without feeling left behind.
             </p>
             <p>
-              Come for the trails. Stay for the sisterhood. Leave with a
-              renewed sense of what&apos;s possible when hiking, strength,
-              restoration, and connection share the same week.
+              Back at the house, it means shared meals, easy conversation,
+              plenty of laughter, and the kind of connection that happens
+              naturally when a small group of women steps away from everyday
+              life and experiences something meaningful together.
             </p>
           </div>
+
+          <p className="retreat__closing">
+            Come for the trails.{' '}
+            <span className="retreat__closing-accent">
+              Leave with far more than miles behind you.
+            </span>
+          </p>
         </div>
 
         <div className="retreat__media">
