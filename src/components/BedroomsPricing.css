@@ -214,6 +214,17 @@
   margin: 0;
 }
 
+.pricing__from {
+  flex: 1 0 100%;
+  color: #6b6560;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  line-height: 1.2;
+}
+
 .pricing__amount {
   color: var(--olive);
   font-family: var(--font-serif);

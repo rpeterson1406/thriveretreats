@@ -40,6 +40,7 @@ const rooms = [
     availability: 'Limited',
     availabilityHighlight: false,
     price: '$3,195',
+    priceFrom: true,
     featured: false,
   },
   {
@@ -58,6 +59,7 @@ const rooms = [
     availability: 'Only 3 suites',
     availabilityHighlight: true,
     price: '$4,495',
+    priceFrom: true,
     featured: false,
   },
 ]
@@ -144,6 +146,9 @@ function BedroomsPricing() {
 
                 <div className="pricing__footer">
                   <p className="pricing__price">
+                    {room.priceFrom ? (
+                      <span className="pricing__from">from</span>
+                    ) : null}
                     <span className="pricing__amount">{room.price}</span>
                     <span className="pricing__per">per person</span>
                   </p>
