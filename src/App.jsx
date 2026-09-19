@@ -1,36 +1,11 @@
-import AnnouncementBanner from './components/AnnouncementBanner'
-import Hero from './components/Hero'
-import TheRetreat from './components/TheRetreat'
-import Itinerary from './components/Itinerary'
-import Philosophy from './components/Philosophy'
-import Accommodations from './components/Accommodations'
-import Leaders from './components/Leaders'
-import ThoughtfullyDesigned from './components/ThoughtfullyDesigned'
-import BedroomsPricing from './components/BedroomsPricing'
-import FAQ from './components/FAQ'
-import FinalCTA from './components/FinalCTA'
-import Footer from './components/Footer'
-import './App.css'
+import TucsonRetreatPage from './pages/TucsonRetreatPage'
 
+/**
+ * Root app shell. "/" and "/Tucson" both render the existing Tucson retreat page.
+ * A future homepage can replace the "/" branch without touching Tucson content.
+ */
 function App() {
-  return (
-    <>
-      <AnnouncementBanner />
-      <main className="page">
-        <Hero />
-        <TheRetreat />
-        <Itinerary />
-        <Philosophy />
-        <Accommodations />
-        <Leaders />
-        <ThoughtfullyDesigned />
-        <BedroomsPricing />
-        <FAQ />
-        <FinalCTA />
-        <Footer />
-      </main>
-    </>
-  )
+  return <TucsonRetreatPage />
 }
 
 export default App

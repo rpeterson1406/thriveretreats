@@ -32,4 +32,9 @@ if (html === template) {
 }
 
 fs.writeFileSync(templatePath, html)
-console.log('Prerendered dist/index.html with static retreat content')
+
+const tucsonDir = path.join(distDir, 'Tucson')
+fs.mkdirSync(tucsonDir, { recursive: true })
+fs.writeFileSync(path.join(tucsonDir, 'index.html'), html)
+
+console.log('Prerendered dist/index.html and dist/Tucson/index.html with static retreat content')
