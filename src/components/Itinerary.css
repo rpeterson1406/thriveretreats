@@ -225,3 +225,14 @@
     gap: 0.75rem;
   }
 }
+
+.itinerary__note {
+  margin: clamp(1.75rem, 3vw, 2.5rem) 0 0;
+  color: #6b6560;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}

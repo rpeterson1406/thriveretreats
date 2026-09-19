@@ -117,6 +117,10 @@ function Itinerary() {
             )
           })}
         </ol>
+
+        <p className="itinerary__note">
+          Note: Planned hikes may change due to weather and conditions
+        </p>
       </div>
     </section>
   )
