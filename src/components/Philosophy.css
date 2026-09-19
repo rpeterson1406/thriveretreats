@@ -141,13 +141,13 @@
 
 .philosophy__closing-emphasis {
   margin: 0 auto;
-  max-width: 40rem;
   color: var(--olive);
   font-family: var(--font-serif);
   font-size: clamp(1.35rem, 2.8vw, 1.85rem);
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.3;
+  white-space: nowrap;
 }
 
 .philosophy__capable {
@@ -171,7 +171,8 @@
 }
 
 @media (max-width: 640px) {
-  .philosophy__closing-lead {
+  .philosophy__closing-lead,
+  .philosophy__closing-emphasis {
     white-space: normal;
   }
 }
