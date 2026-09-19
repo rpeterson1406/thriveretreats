@@ -1,4 +1,4 @@
-import { RESERVE_MAILTO } from '../contactEmail'
+import { ASK_MAILTO } from '../contactEmail'
 import './FinalCTA.css'
 
 function FinalCTA() {
@@ -21,7 +21,7 @@ function FinalCTA() {
           <li>Only 7–10 Women</li>
         </ul>
 
-        <a className="final-cta__button" href={RESERVE_MAILTO}>
+        <a className="final-cta__button" href={ASK_MAILTO}>
           Ask Us About the Retreat <span aria-hidden="true">→</span>
         </a>
       </div>

@@ -22,8 +22,8 @@ const itineraryDays = [
     day: '02',
     title: 'Hike + Strength',
     activities: [
-      "Morning desert hike with guided coaching\nBlackett's Ridge Trail - 5 miles",
-      'Midday strength session designed for women 40+',
+      "Morning desert hike with guided coaching\nSeven Falls - 7 miles",
+      'Restorative practices and recovery focus',
       'Nourishing lunch and recovery time',
       'Evening circle and optional stretch',
     ],
@@ -32,8 +32,8 @@ const itineraryDays = [
     day: '03',
     title: 'Explore + Restore',
     activities: [
-      'Scenic trail exploration at a steady pace\nSeven Falls - 7 miles',
-      'Restorative practices and recovery focus',
+      "Scenic trail exploration at a steady pace\nBlackett's Ridge Trail - 5 miles",
+      'Afternoon yoga session designed for women 40+',
       'Leisurely afternoon and spa-style downtime',
       'Chef-prepared dinner and open conversation',
     ],

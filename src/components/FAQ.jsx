@@ -14,7 +14,7 @@ const faqItems = [
   {
     question: 'How difficult are the hikes?',
     answer:
-      "Be prepared to hike up to 8 miles. Groups usually break into different paces so you don't have to be fast, but you do need to be able to do the distance.",
+      "Be prepared to hike up to 7 miles. Groups usually break into different paces so you don't have to be fast, but you do need to be able to do the distance.",
   },
   {
     question: 'Do I need to be an experienced hiker?',

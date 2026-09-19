@@ -38,8 +38,12 @@ function Footer() {
             © 2027 THRIVE Women Fitness
           </p>
 
-          {/* Placeholder — connect to the main THRIVE Women Fitness website later */}
-          <a className="site-footer__external" href="#hero">
+          <a
+            className="site-footer__external"
+            href="https://www.thrivewomenfitness.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Visit Thrive Women Fitness
           </a>
         </div>
