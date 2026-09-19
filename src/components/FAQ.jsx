@@ -14,7 +14,7 @@ const faqItems = [
   {
     question: 'How difficult are the hikes?',
     answer:
-      '[PLACEHOLDER] Hiking difficulty, distances, and elevation details for the Tucson trails will be provided in the final itinerary.',
+      "Be prepared to hike up to 8 miles. Groups usually break into different paces so you don't have to be fast, but you do need to be able to do the distance.",
   },
   {
     question: 'Do I need to be an experienced hiker?',
@@ -29,12 +29,12 @@ const faqItems = [
   {
     question: 'What is not included?',
     answer:
-      '[PLACEHOLDER] Items not included — such as airfare, ground transportation, personal gear, or optional extras — will be listed clearly in the final retreat details.',
+      'Airfare, travel insurance, personal gear, and Uber for airport transportation outside of our private THRIVE shuttle. The final retreat details will clearly list what is not included.',
   },
   {
     question: 'What should I pack?',
     answer:
-      '[PLACEHOLDER] A recommended packing list (hiking footwear, layers, sun protection, and personal items) will be shared with registered guests before the retreat.',
+      'Upon registration we will provide a full packing list. Know that you will need to have your own hydration system with at least 1.5L water bladder and hiking poles. We will have some poles on hand to lend out and can also provide links for some of our favorite lightweight options.',
   },
   {
     question: 'How do accommodations work?',
@@ -44,17 +44,17 @@ const faqItems = [
   {
     question: 'Can I attend by myself?',
     answer:
-      'Yes. Many women attend on their own. The intentionally small group is designed to help you feel welcomed and connected from the first evening.',
+      'Yes. Many women attend on their own. The intentionally small group is designed to help you feel welcomed and connected from the first evening. We will happily pair you with another fabulous THRIVE woman. When filling out the registration form, there will be a question asking if you have a roommate already or would like us to match you.',
   },
   {
     question: 'How do I get to the retreat?',
     answer:
-      '[PLACEHOLDER] Arrival airport, transfer options, and recommended travel timing for the Tucson property will be provided in the final logistics guide.',
+      "Tucson International Airport. It's conveniently located 35 minutes away. Complimentary airport transportation is provided for guests arriving and departing during our designated retreat travel windows. If your flight schedule falls outside those times, ride-share services such as Uber and Lyft are readily available and can be arranged at your own expense for approximately $60. Please do not book any airfare or travel arrangements until your trip details are confirmed. We will provide further information and assistance upon confirmation.",
   },
   {
     question: 'What is the cancellation policy?',
     answer:
-      '[PLACEHOLDER] The official cancellation and refund policy will be published with final registration details. No specific terms are listed here yet.',
+      'A 50% deposit is required upon registration. The remainder of the deposit is due 60 days prior to the retreat. You can cancel for a full refund up until 90 days prior to the retreat.',
   },
 ]
 

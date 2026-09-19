@@ -39,7 +39,7 @@ const inclusions = [
   },
   {
     title: 'Luxury Accommodations',
-    text: 'Five nights in a beautiful private retreat home with spacious rooms, en-suite bathrooms, a pool, hot tub and stunning desert views.',
+    text: 'Five days in a beautiful private retreat home with spacious rooms, en-suite bathrooms, a pool, hot tub and stunning desert views.',
     color: 'olive',
     icon: (
       <svg viewBox="0 0 48 48" aria-hidden="true">
