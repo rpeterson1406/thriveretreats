@@ -71,7 +71,9 @@ function FAQ() {
         <header className="faq__header">
           <p className="faq__label">FAQ</p>
           <h2 id="faq-heading" className="faq__title">
-            Questions? We&apos;ve Got You.
+            Questions?
+            <br className="faq__title-break" aria-hidden="true" />{' '}
+            <span className="faq__title-line">We&apos;ve Got You.</span>
           </h2>
           <div className="faq__accent" aria-hidden="true" />
         </header>

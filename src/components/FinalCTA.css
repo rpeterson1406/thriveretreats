@@ -98,4 +98,22 @@
     flex-direction: column;
     gap: 0.55rem;
   }
+
+  .final-cta__label {
+    font-size: 0.82rem;
+  }
+
+  .final-cta__copy {
+    font-size: 1.08rem;
+  }
+
+  .final-cta__meta li {
+    font-size: 0.85rem;
+  }
+
+  .final-cta__button {
+    font-size: 0.88rem;
+    min-height: 3rem;
+    padding: 1.05rem 1.7rem;
+  }
 }

@@ -100,3 +100,13 @@
     height: 20rem;
   }
 }
+
+@media (max-width: 600px) {
+  .retreat__label {
+    font-size: 0.82rem;
+  }
+
+  .retreat__prose p {
+    font-size: 1.08rem;
+  }
+}

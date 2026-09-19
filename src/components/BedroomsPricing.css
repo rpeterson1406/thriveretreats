@@ -184,7 +184,7 @@
 }
 
 .pricing__availability {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.75rem;
   color: var(--olive);
   font-family: var(--font-sans);
   font-size: 0.8rem;
@@ -196,6 +196,39 @@
 .pricing__availability--notice {
   color: var(--pink);
   font-weight: 700;
+}
+
+.pricing__upgrade {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1 1 auto;
+  margin: 0 0 1.25rem;
+  min-height: 6.75rem;
+}
+
+.pricing__upgrade--spacer {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pricing__upgrade-title,
+.pricing__upgrade-line {
+  margin: 0;
+  color: var(--olive);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.pricing__upgrade-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.pricing__upgrade-line {
+  font-weight: 500;
+  color: #4a4a4a;
 }
 
 .pricing__footer {
@@ -291,5 +324,39 @@
 
   .pricing__details li {
     grid-template-columns: 4.75rem 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing__subhead {
+    font-size: 1.08rem;
+  }
+
+  .pricing__tag {
+    font-size: 0.72rem;
+  }
+
+  .pricing__description {
+    font-size: 1rem;
+  }
+
+  .pricing__details li {
+    font-size: 0.95rem;
+  }
+
+  .pricing__availability,
+  .pricing__upgrade-title,
+  .pricing__upgrade-line {
+    font-size: 0.9rem;
+  }
+
+  .pricing__from,
+  .pricing__per {
+    font-size: 0.88rem;
+  }
+
+  .pricing__select {
+    font-size: 0.85rem;
+    min-height: 3rem;
   }
 }

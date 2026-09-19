@@ -61,6 +61,14 @@ const rooms = [
     price: '$4,495',
     priceFrom: true,
     featured: false,
+    upgrade: {
+      title: 'Premier Primary Suite Upgrade',
+      lines: [
+        'Our largest King suite features an expansive private bathroom and additional space',
+        '+$200/person when shared.',
+        '+$400 when private',
+      ],
+    },
   },
 ]
 
@@ -143,6 +151,29 @@ function BedroomsPricing() {
                 >
                   Availability: {room.availability}
                 </p>
+
+                <div
+                  className={[
+                    'pricing__upgrade',
+                    room.upgrade ? '' : 'pricing__upgrade--spacer',
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
+                  aria-hidden={room.upgrade ? undefined : true}
+                >
+                  {room.upgrade ? (
+                    <>
+                      <p className="pricing__upgrade-title">
+                        {room.upgrade.title}
+                      </p>
+                      {room.upgrade.lines.map((line) => (
+                        <p key={line} className="pricing__upgrade-line">
+                          {line}
+                        </p>
+                      ))}
+                    </>
+                  ) : null}
+                </div>
 
                 <div className="pricing__footer">
                   <p className="pricing__price">

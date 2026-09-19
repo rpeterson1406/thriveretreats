@@ -35,7 +35,7 @@ const itineraryDays = [
       "Scenic trail exploration at a steady pace\nBlackett's Ridge Trail - 5 miles",
       'Afternoon yoga session designed for women 40+',
       'Leisurely afternoon and spa-style downtime',
-      'Chef-prepared dinner and open conversation',
+      'Post-dinner THRIVE-forward activity',
     ],
   },
   {

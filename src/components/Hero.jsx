@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { CONTACT_MAILTO, RESERVE_MAILTO } from '../contactEmail'
 import './Hero.css'
 
@@ -96,6 +97,19 @@ const features = [
 ]
 
 function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (!menuOpen) return undefined
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [menuOpen])
+
   return (
     <section id="hero" className="hero" aria-label="Hero">
       <div className="hero__stage">
@@ -109,9 +123,19 @@ function Hero() {
             <span className="hero__logo-sub">Women Fitness</span>
           </a>
 
-          <nav className="hero__nav" aria-label="Primary">
+          <nav
+            id="hero-primary-nav"
+            className={['hero__nav', menuOpen ? 'hero__nav--open' : '']
+              .filter(Boolean)
+              .join(' ')}
+            aria-label="Primary"
+          >
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+              >
                 {link.label}
               </a>
             ))}
@@ -120,6 +144,21 @@ function Hero() {
           <a className="hero__header-cta" href={CONTACT_MAILTO}>
             Questions? Let&apos;s Chat
           </a>
+
+          <button
+            type="button"
+            className="hero__menu-toggle"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="hero-primary-nav"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span className="hero__menu-toggle-bars" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
 
           <p className="hero__brand-tagline">
             <span>Stronger</span>

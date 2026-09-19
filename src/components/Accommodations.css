@@ -230,3 +230,33 @@
     min-height: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .stay__label {
+    font-size: 0.82rem;
+  }
+
+  .stay__intro {
+    font-size: 1.08rem;
+  }
+
+  .stay__placeholder-label {
+    font-size: 0.9rem;
+  }
+
+  .stay__placeholder-hint {
+    font-size: 0.8rem;
+  }
+
+  .stay__copy p {
+    font-size: 1.05rem;
+  }
+
+  .stay__highlights-label {
+    font-size: 0.8rem;
+  }
+
+  .stay__highlights-list li {
+    font-size: 1rem;
+  }
+}

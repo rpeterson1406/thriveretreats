@@ -176,3 +176,42 @@
     white-space: normal;
   }
 }
+
+@media (max-width: 600px) {
+  .philosophy__manifesto-support .philosophy__yes {
+    color: #f04890;
+    font-weight: 700;
+  }
+
+  .philosophy__header {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .philosophy__accent {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .philosophy__intro {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    font-size: 1.12rem;
+  }
+
+  .philosophy__label {
+    font-size: 0.82rem;
+  }
+
+  .philosophy__eyebrow {
+    font-size: 0.8rem;
+  }
+
+  .philosophy__column p:last-child {
+    font-size: 1.05rem;
+  }
+}

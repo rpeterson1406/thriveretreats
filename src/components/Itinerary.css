@@ -224,6 +224,26 @@
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
+
+  .itinerary__label {
+    font-size: 0.82rem;
+  }
+
+  .itinerary__intro {
+    font-size: 1.08rem;
+  }
+
+  .itinerary__day-label {
+    font-size: 0.8rem;
+  }
+
+  .itinerary__activities > li {
+    font-size: 1rem;
+  }
+
+  .itinerary__note {
+    font-size: 0.95rem;
+  }
 }
 
 .itinerary__note {

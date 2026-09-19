@@ -107,6 +107,23 @@
 @media (max-width: 600px) {
   .site-footer__tagline {
     align-items: flex-start;
+    font-size: 0.65rem;
+  }
+
+  .site-footer__logo-sub {
+    font-size: 0.7rem;
+  }
+
+  .site-footer__nav a {
+    font-size: 0.8rem;
+  }
+
+  .site-footer__copyright {
+    font-size: 0.88rem;
+  }
+
+  .site-footer__external {
+    font-size: 0.8rem;
   }
 
   .site-footer__bottom {

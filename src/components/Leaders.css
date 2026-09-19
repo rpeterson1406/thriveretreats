@@ -156,3 +156,33 @@
     border-top: 1px solid var(--rule);
   }
 }
+
+@media (max-width: 600px) {
+  .leaders__header {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .leaders__accent {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .leaders__label {
+    font-size: 0.82rem;
+  }
+
+  .leaders__role {
+    font-size: 0.82rem;
+  }
+
+  .leaders__bio {
+    font-size: 1.05rem;
+  }
+
+  .leaders__credentials li {
+    font-size: 0.98rem;
+  }
+}

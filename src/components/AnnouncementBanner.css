@@ -171,5 +171,11 @@
 
   .announce__body {
     margin-bottom: 1.35rem;
+    font-size: 1.05rem;
+  }
+
+  .announce__cta {
+    font-size: 0.85rem;
+    min-height: 3rem;
   }
 }

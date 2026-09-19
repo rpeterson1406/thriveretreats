@@ -33,6 +33,10 @@
   line-height: 1.12;
 }
 
+.faq__title-break {
+  display: none;
+}
+
 .faq__accent {
   width: 3rem;
   height: 2px;
@@ -127,6 +131,26 @@
 }
 
 @media (max-width: 600px) {
+  .faq__title-break {
+    display: block;
+  }
+
+  .faq__title-line {
+    white-space: nowrap;
+  }
+
+  .faq__label {
+    font-size: 0.82rem;
+  }
+
+  .faq__question-text {
+    font-size: 1.08rem;
+  }
+
+  .faq__answer {
+    font-size: 1.05rem;
+  }
+
   .faq__trigger {
     align-items: flex-start;
     padding: 1.2rem 0;
