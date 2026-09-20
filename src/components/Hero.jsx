@@ -43,7 +43,7 @@ const features = [
     ),
   },
   {
-    title: '7–10 Women',
+    title: 'Limited to 10 Women',
     subtitle: 'Intentionally Small',
     color: 'pink',
     icon: (
@@ -172,7 +172,13 @@ function Hero() {
           <div className="hero__intro">
             <p className="hero__eyebrow">Thrive Women</p>
             <h1 className="hero__title">Tucson Hiking Retreat</h1>
-            <p className="hero__script">Adventure Looks Good On You.</p>
+            <p className="hero__script">
+              Discover
+              <span className="hero__script-dot" aria-hidden="true" />
+              Connect
+              <span className="hero__script-dot" aria-hidden="true" />
+              Thrive
+            </p>
           </div>
 
           <div className="hero__body">
@@ -185,7 +191,7 @@ function Hero() {
             Reserve Your Room <span aria-hidden="true">→</span>
           </a>
             <p className="hero__details">
-              Only 7–10 Women <span aria-hidden="true">•</span> Luxury
+              Limited to 10 Women <span aria-hidden="true">•</span> Luxury
               Accommodations <span aria-hidden="true">•</span> All Meals{' '}
               <span aria-hidden="true">•</span> Guided Adventures
             </p>
@@ -193,9 +199,7 @@ function Hero() {
         </div>
 
         <p className="hero__side-script">
-          More Trails
-          <br />
-          Brighter Days
+          Explore &amp; Restore
           <span className="hero__heart" aria-hidden="true">
             ♥
           </span>

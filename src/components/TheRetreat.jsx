@@ -16,7 +16,7 @@ function TheRetreat() {
           <div className="retreat__prose">
             <p>There&apos;s a reason we keep THRIVE retreats small.</p>
             <p>
-              With just <strong>7–10 women</strong>, you&apos;re not one face in
+              With only <strong>10 women</strong>, you&apos;re not one face in
               a crowd. There&apos;s time to get to know one another, space for
               individual attention, and the flexibility to move through each day
               as a group rather than following a rigid tour schedule.
@@ -35,9 +35,9 @@ function TheRetreat() {
           </div>
 
           <p className="retreat__closing">
-            Come for the trails.{' '}
+            The group is small.{' '}
             <span className="retreat__closing-accent">
-              Leave with far more than miles behind you.
+              The impact is lasting.
             </span>
           </p>
         </div>

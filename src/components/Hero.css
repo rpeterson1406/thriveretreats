@@ -194,6 +194,20 @@
     0 0 14px rgba(253, 248, 243, 0.45);
 }
 
+.hero__script-dot {
+  display: inline-block;
+  width: 0.18em;
+  height: 0.18em;
+  margin: 0 0.32em;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: middle;
+  transform: translateY(-0.08em);
+  box-shadow:
+    0 1px 0 rgba(253, 248, 243, 0.7),
+    0 0 10px rgba(253, 248, 243, 0.35);
+}
+
 .hero__body {
   max-width: 28rem;
   margin-top: 1.15rem;
@@ -263,7 +277,7 @@
 
 .hero__side-script {
   position: absolute;
-  left: 17%;
+  left: clamp(1.25rem, 4vw, 3rem);
   bottom: clamp(1.25rem, 4vw, 3rem);
   z-index: 1;
   margin: 0;
@@ -272,8 +286,7 @@
   font-size: clamp(2.75rem, 5vw, 4.25rem);
   font-weight: 700;
   line-height: 1.05;
-  text-align: center;
-  transform: translateX(-50%);
+  text-align: left;
   text-shadow:
     0 1px 0 rgba(253, 248, 243, 0.75),
     0 0 12px rgba(253, 248, 243, 0.5);
@@ -286,7 +299,7 @@
   font-family: Georgia, serif;
   font-size: 0.85rem;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
 }
 
 .hero__scroll {
