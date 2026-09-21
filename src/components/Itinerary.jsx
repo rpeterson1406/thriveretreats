@@ -1,126 +1,364 @@
 import './Itinerary.css'
 
-/**
- * Tucson itinerary content — replace these placeholders with the final schedule.
- * Edit day titles and activities here; layout updates automatically.
- */
-const itineraryIntro =
-  'Five days of guided hiking, intentional fitness, restoration, memorable meals, and the kind of connection that only happens when a small group of women share the trail together.'
-
-const itineraryDays = [
+const days = [
   {
-    day: '01',
-    title: 'Arrive + Connect',
-    activities: [
-      'Welcome reception and introductions',
-      'Settle into luxury accommodations',
-      'Light evening movement and orientation',
-      'Shared dinner and retreat kickoff',
-    ],
+    id: 1,
+    side: 'left',
+    tone: 'green',
+    label: 'Day 1',
+    title: (
+      <>
+        Arrive <span className="itin__card-plus">+</span> Connect
+      </>
+    ),
+    text: (
+      <>
+        Settle into our desert retreat
+        <br />
+        home, meet the group, enjoy a
+        <br />
+        welcome dinner, and ease into
+        <br />
+        the experience with light
+        <br />
+        movement and connection.
+      </>
+    ),
+    image: '/images/house_patio_pic.avif',
+    imageAlt: 'Desert retreat patio at golden hour',
+    icon: 'home',
   },
   {
-    day: '02',
-    title: 'Hike + Strength',
-    activities: [
-      "Morning desert hike with guided coaching\nSeven Falls - 7 miles",
-      'Restorative practices and recovery focus',
-      'Nourishing lunch and recovery time',
-      'Evening circle and optional stretch',
-    ],
+    id: 2,
+    side: 'right',
+    tone: 'orange',
+    label: 'Day 2',
+    title: 'Explore',
+    text: (
+      <>
+        Head out for a beautiful guided
+        <br />
+        hike, take in iconic Sonoran Desert
+        <br />
+        scenery, then return for recovery,
+        <br />
+        nourishment, and relaxation.
+      </>
+    ),
+    image: '/images/day2card.png',
+    imageAlt: 'Women hiking a Sonoran Desert trail toward mountain peaks',
+    icon: 'binoculars',
   },
   {
-    day: '03',
-    title: 'Explore + Restore',
-    activities: [
-      "Scenic trail exploration at a steady pace\nBlackett's Ridge Trail - 5 miles",
-      'Afternoon yoga session designed for women 40+',
-      'Leisurely afternoon and spa-style downtime',
-      'Post-dinner THRIVE-forward activity',
-    ],
+    id: 3,
+    side: 'left',
+    tone: 'pink',
+    label: 'Day 3',
+    title: 'Challenge',
+    text: (
+      <>
+        Today is the signature adventure —
+        <br />
+        a longer, more memorable hike
+        <br />
+        with incredible views, shared
+        <br />
+        accomplishment, and a satisfying
+        <br />
+        finish.
+      </>
+    ),
+    image: '/images/day3card.png',
+    imageAlt: 'Women hikers posing by a desert waterfall in a rocky canyon',
+    icon: 'mountain',
   },
   {
-    day: '04',
-    title: 'Adventure + Celebrate',
-    activities: [
-      'Signature adventure hike of the week\nBridalveil Falls - 7 miles',
-      'Strength + mobility finisher',
-      'Celebration dinner with the group',
-      'Reflection, wins, and connection',
-    ],
+    id: 4,
+    side: 'right',
+    tone: 'green',
+    label: 'Day 4',
+    title: (
+      <>
+        Adventure <span className="itin__card-plus">+</span> Restore
+      </>
+    ),
+    text: (
+      <>
+        Enjoy another scenic outing with
+        <br />
+        space to breathe, reflect, recover,
+        <br />
+        and savor the rhythm of the
+        <br />
+        retreat.
+      </>
+    ),
+    image: '/images/day4card.png',
+    imageAlt: 'Sonoran Desert sunset with saguaros and mountain ridges',
+    icon: 'lotus',
   },
   {
-    day: '05',
-    title: 'Final Morning + Departure',
-    activities: [
-      'Sunrise movement or short closing hike',
-      'Farewell breakfast together',
-      'Checkout and departure',
-    ],
+    id: 5,
+    side: 'left',
+    tone: 'orange',
+    label: 'Day 5',
+    title: (
+      <>
+        Reflect <span className="itin__card-plus">+</span> Depart
+      </>
+    ),
+    text: (
+      <>
+        Begin the morning with gentle
+        <br />
+        movement and breakfast before
+        <br />
+        wrapping up the retreat feeling
+        <br />
+        stronger, clearer, and renewed.
+      </>
+    ),
+    image: '/images/day5card.png',
+    imageAlt: 'Speckled mug with desert sunrise view on a wooden table',
+    icon: 'sun',
   },
 ]
 
+const dayIcons = {
+  home: { src: '/images/itin-icon-home.png', w: 62, h: 66 },
+  binoculars: { src: '/images/itin-icon-binoculars.png', w: 59, h: 59 },
+  mountain: { src: '/images/itin-icon-mountain.png', w: 59, h: 59 },
+  lotus: { src: '/images/itin-icon-lotus.png', w: 59, h: 58 },
+  sun: { src: '/images/itin-icon-sun.png', w: 60, h: 60 },
+}
+
+function DayIcon({ type }) {
+  const icon = dayIcons[type]
+  if (!icon) return null
+
+  return (
+    <img
+      className="itin__card-icon-img"
+      src={icon.src}
+      alt=""
+      width={icon.w}
+      height={icon.h}
+      decoding="async"
+    />
+  )
+}
+
+function TrailPath() {
+  return (
+    <svg
+      className="itin__trail-svg"
+      viewBox="0 0 160 1200"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        className="itin__trail-line"
+        d="M80 8
+           C 48 55, 118 95, 80 150
+           C 35 215, 130 265, 80 330
+           C 28 400, 135 455, 80 525
+           C 22 595, 140 650, 80 720
+           C 30 790, 132 845, 80 915
+           C 40 975, 120 1025, 80 1085
+           C 58 1125, 98 1160, 80 1192"
+      />
+    </svg>
+  )
+}
+
+function CactusMark() {
+  return (
+    <img
+      className="itin__cactus"
+      src="/images/itin-cactus.png"
+      alt=""
+      aria-hidden="true"
+      width="56"
+      height="58"
+      decoding="async"
+    />
+  )
+}
+
+function MountainMark() {
+  return (
+    <img
+      className="itin__mountains-small"
+      src="/images/itin-trail-mountain.png"
+      alt=""
+      aria-hidden="true"
+      width="82"
+      height="37"
+      decoding="async"
+    />
+  )
+}
+
 function Itinerary() {
   return (
-    <section id="itinerary" className="itinerary" aria-labelledby="itinerary-heading">
-      <div className="itinerary__inner">
-        <header className="itinerary__header">
-          <div className="itinerary__header-copy">
-            <p className="itinerary__label">Itinerary</p>
-            <h2 id="itinerary-heading" className="itinerary__title">
-              Five Days of Adventure
-            </h2>
-            <div className="itinerary__accent" aria-hidden="true" />
-            <p className="itinerary__intro">{itineraryIntro}</p>
+    <section id="itinerary" className="itin" aria-labelledby="itinerary-heading">
+      <div className="itin__backdrop" aria-hidden="true">
+        <img
+          className="itin__topo"
+          src="/images/itin-topo.png"
+          alt=""
+          width="300"
+          height="95"
+          decoding="async"
+        />
+      </div>
+
+      <div className="itin__inner">
+        <header className="itin__header">
+          <div className="itin__eyebrow-row">
+            <span className="itin__eyebrow-rule" aria-hidden="true" />
+            <p className="itin__eyebrow">
+              Hike <span aria-hidden="true">•</span> Grow{' '}
+              <span aria-hidden="true">•</span> Belong{' '}
+              <span aria-hidden="true">•</span> Thrive
+            </p>
+            <span className="itin__eyebrow-rule" aria-hidden="true" />
           </div>
 
-          <div className="itinerary__media">
-            <img
-              className="itinerary__image"
-              src="/images/hike_explore_tucson.avif"
-              alt="Women exploring Tucson desert trails on a THRIVE hike"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="itin__title-band">
+            <p className="itin__destination" aria-hidden="true">
+              Destination:
+              <br />
+              Fully
+              <br />
+              Alive
+              <span className="itin__destination-rule" />
+            </p>
+
+            <div className="itin__title-block">
+              <h2 id="itinerary-heading" className="itin__title">
+                A Look at Your Tucson Retreat
+              </h2>
+              <p className="itin__subtitle">
+                Five unforgettable days of hiking, strength, restoration and
+                connection in the Sonoran Desert.
+              </p>
+            </div>
+
+            <span className="itin__title-spacer" aria-hidden="true" />
           </div>
+
+          <img
+            className="itin__script-note"
+            src="/images/itin-hike-script.png"
+            alt=""
+            aria-hidden="true"
+            width="230"
+            height="148"
+            decoding="async"
+          />
         </header>
 
-        <ol className="itinerary__timeline">
-          {itineraryDays.map((item) => {
-            const activitySlots = Array.from({ length: 4 }, (_, index) => item.activities[index] ?? null)
+        <div className="itin__board">
+          <TrailPath />
 
-            return (
-              <li key={item.day} className="itinerary__day">
-                <div className="itinerary__day-marker" aria-hidden="true">
-                  <span className="itinerary__day-number">{item.day}</span>
-                </div>
+          <div className="itin__trail-ornaments" aria-hidden="true">
+            <CactusMark />
+            <MountainMark />
+          </div>
 
-                <div className="itinerary__day-content">
-                  <p className="itinerary__day-label">Day {Number(item.day)}</p>
-                  <h3 className="itinerary__day-title">{item.title}</h3>
-                  <ul className="itinerary__activities">
-                    {activitySlots.map((activity, index) => (
-                      <li
-                        key={activity ?? `${item.day}-slot-${index}`}
-                        className={
-                          activity
-                            ? undefined
-                            : 'itinerary__activities-item--empty'
-                        }
-                        aria-hidden={activity ? undefined : true}
-                      >
-                        {activity}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <ol className="itin__markers" aria-hidden="true">
+            {days.map((day) => (
+              <li
+                key={day.id}
+                className={`itin__marker itin__marker--${day.id} itin__marker--${day.side} itin__marker--${day.tone}`}
+              >
+                <span className="itin__marker-connector" />
+                <span className="itin__marker-disk">{day.id}</span>
               </li>
-            )
-          })}
-        </ol>
+            ))}
+          </ol>
 
-        <p className="itinerary__note">
-          Note: Planned hikes may change due to weather and conditions
-        </p>
+          <p className="itin__aside itin__aside--top" aria-hidden="true">
+            Bolder Steps
+            <br />
+            Brighter Tomorrows
+            <span className="itin__aside-rule" />
+          </p>
+
+          <p className="itin__aside itin__aside--mid" aria-hidden="true">
+            To Go Further,
+            <br />
+            Go Together
+            <span className="itin__aside-rule" />
+          </p>
+
+          <div className="itin__cards">
+            {days.map((day) => (
+              <article
+                key={day.id}
+                data-day={day.id}
+                className={`itin__card itin__card--${day.side} itin__card--${day.tone} itin__card--day${day.id}`}
+              >
+                <div className="itin__card-media">
+                  <img
+                    className="itin__card-image"
+                    src={day.image}
+                    alt={day.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="itin__card-body">
+                  <div className="itin__card-heading">
+                    <p className="itin__card-day">{day.label}</p>
+                    <h3 className="itin__card-title">{day.title}</h3>
+                  </div>
+                  <div className="itin__card-content">
+                    <span className="itin__card-icon" aria-hidden="true">
+                      <DayIcon type={day.icon} />
+                    </span>
+                    <p className="itin__card-text">{day.text}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <footer className="itin__footer">
+          <div className="itin__footer-center">
+            <div className="itin__distance-pill">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m3 18 5.5-8.5 2.8 4.2L15 7l6 11H3Z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <p>
+                Approx. hike distances: Day 2 ~7 miles • Day 3 ~5 miles • Day 4 ~7
+                miles • Day 5 optional short walk
+              </p>
+            </div>
+            <p className="itin__note">
+              Note: Planned hikes may change due to weather and conditions
+            </p>
+          </div>
+
+          <p className="itin__footer-script">
+            Strength
+            <br />
+            <span className="itin__footer-script-row">
+              Grows Here
+              <span className="itin__footer-script-line" aria-hidden="true" />
+            </span>
+          </p>
+        </footer>
+
       </div>
     </section>
   )
