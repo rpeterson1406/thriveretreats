@@ -1,6 +1,12 @@
 {
   "rewrites": [
-    { "source": "/Tucson", "destination": "/Tucson/index.html" },
-    { "source": "/Tucson/", "destination": "/Tucson/index.html" }
+    {
+      "source": "/tucson",
+      "destination": "/"
+    },
+    {
+      "source": "/tucson/",
+      "destination": "/"
+    }
   ]
 }
