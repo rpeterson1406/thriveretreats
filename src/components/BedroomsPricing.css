@@ -311,6 +311,12 @@
   .pricing__card--featured {
     order: -1;
   }
+
+  /* Shared Queen / King for Two: drop desktop alignment spacer between
+     availability and price when cards stack. */
+  .pricing__upgrade--spacer {
+    display: none;
+  }
 }
 
 @media (max-width: 560px) {
