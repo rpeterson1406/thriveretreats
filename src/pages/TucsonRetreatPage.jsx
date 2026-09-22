@@ -23,11 +23,11 @@ function TucsonRetreatPage() {
         <Hero />
         <TheRetreat />
         <Itinerary />
-        <Philosophy />
-        <Accommodations />
-        <Leaders />
         <ThoughtfullyDesigned />
+        <Leaders />
+        <Accommodations />
         <BedroomsPricing />
+        <Philosophy />
         <FAQ />
         <FinalCTA />
         <Footer />

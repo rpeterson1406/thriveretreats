@@ -7,8 +7,20 @@ const HERO_IMAGE = '/images/hero-image.avif'
 const navLinks = [
   { href: '#the-retreat', label: 'The Retreat' },
   { href: '#itinerary', label: 'Itinerary' },
+  {
+    href: '#thoughtfully-designed',
+    label: "What's Included",
+    mobileOnly: true,
+  },
+  { href: '#leaders', label: 'Your Guides' },
   { href: '#accommodations', label: 'Accommodations' },
-  { href: '#faq', label: 'FAQ' },
+  {
+    href: '#bedrooms-pricing',
+    label: 'Rooms & Pricing',
+    mobileOnly: true,
+  },
+  { href: '#philosophy', label: 'Philosophy', mobileOnly: true },
+  { href: '#faq', label: 'FAQ', mobileOnly: true },
 ]
 
 const features = [
@@ -129,6 +141,9 @@ function Hero() {
               <a
                 key={link.href}
                 href={link.href}
+                className={
+                  link.mobileOnly ? 'hero__nav-link--mobile-only' : undefined
+                }
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
