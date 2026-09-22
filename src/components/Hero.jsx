@@ -118,11 +118,6 @@ function Hero() {
         </div>
 
         <header className="hero__header">
-          <a className="hero__logo" href="#hero">
-            <span className="hero__logo-thrive">Thrive</span>
-            <span className="hero__logo-sub">Women Fitness</span>
-          </a>
-
           <nav
             id="hero-primary-nav"
             className={['hero__nav', menuOpen ? 'hero__nav--open' : '']
@@ -159,13 +154,6 @@ function Hero() {
               <span />
             </span>
           </button>
-
-          <p className="hero__brand-tagline">
-            <span>Stronger</span>
-            <span>Happier</span>
-            <span>Brighter</span>
-            <span>Together</span>
-          </p>
         </header>
 
         <div className="hero__content">
@@ -182,7 +170,13 @@ function Hero() {
           </div>
 
           <div className="hero__body">
-            <p className="hero__meta">March 18–22, 2027 &nbsp;|&nbsp; Tucson, Arizona</p>
+            <p className="hero__meta">
+              March 18–22, 2027 &nbsp;|&nbsp; Tucson,{' '}
+              <span className="hero__meta-state hero__meta-state--full">
+                Arizona
+              </span>
+              <span className="hero__meta-state hero__meta-state--short">AZ</span>
+            </p>
             <p className="hero__description">
               Five unforgettable days of hiking, strength, restoration and
               connection — created exclusively for women 40+.
