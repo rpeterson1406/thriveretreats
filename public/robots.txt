@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thriveretreats.vercel.app/sitemap.xml
+Sitemap: https://thrivewomenretreats.com/sitemap.xml
