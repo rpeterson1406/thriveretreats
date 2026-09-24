@@ -218,8 +218,7 @@ function Itinerary() {
           <div className="itin__eyebrow-row">
             <span className="itin__eyebrow-rule" aria-hidden="true" />
             <p className="itin__eyebrow">
-              Hike <span aria-hidden="true">•</span> Grow{' '}
-              <span aria-hidden="true">•</span> Belong{' '}
+              Discover <span aria-hidden="true">•</span> Connect{' '}
               <span aria-hidden="true">•</span> Thrive
             </p>
             <span className="itin__eyebrow-rule" aria-hidden="true" />
@@ -348,15 +347,6 @@ function Itinerary() {
               Note: Planned hikes may change due to weather and conditions
             </p>
           </div>
-
-          <p className="itin__footer-script">
-            Strength
-            <br />
-            <span className="itin__footer-script-row">
-              Grows Here
-              <span className="itin__footer-script-line" aria-hidden="true" />
-            </span>
-          </p>
         </footer>
 
       </div>
