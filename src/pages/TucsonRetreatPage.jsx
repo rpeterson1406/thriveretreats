@@ -2,7 +2,6 @@ import AnnouncementBanner from '../components/AnnouncementBanner'
 import Hero from '../components/Hero'
 import TheRetreat from '../components/TheRetreat'
 import Itinerary from '../components/Itinerary'
-import Philosophy from '../components/Philosophy'
 import Accommodations from '../components/Accommodations'
 import Leaders from '../components/Leaders'
 import ThoughtfullyDesigned from '../components/ThoughtfullyDesigned'
@@ -27,7 +26,6 @@ function TucsonRetreatPage() {
         <Leaders />
         <Accommodations />
         <BedroomsPricing />
-        <Philosophy />
         <FAQ />
         <FinalCTA />
         <Footer />
