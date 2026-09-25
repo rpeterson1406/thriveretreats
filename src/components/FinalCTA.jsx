@@ -18,7 +18,7 @@ function FinalCTA() {
         <ul className="final-cta__meta">
           <li>March 18–22, 2027</li>
           <li>Tucson, Arizona</li>
-          <li>Only 7–10 Women</li>
+          <li>Limited to 10 Women</li>
         </ul>
 
         <a className="final-cta__button" href={ASK_MAILTO}>

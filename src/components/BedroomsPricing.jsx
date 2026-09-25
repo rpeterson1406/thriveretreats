@@ -42,6 +42,13 @@ const rooms = [
     price: '$3,195',
     priceFrom: true,
     featured: false,
+    upgrade: {
+      title: 'Premier Primary Suite Upgrade',
+      lines: [
+        'Our largest King suite features an expansive private bathroom and additional space',
+        '+$200/person when shared.',
+      ],
+    },
   },
   {
     id: 'private-king',
@@ -61,14 +68,6 @@ const rooms = [
     price: '$4,495',
     priceFrom: true,
     featured: false,
-    upgrade: {
-      title: 'Premier Primary Suite Upgrade',
-      lines: [
-        'Our largest King suite features an expansive private bathroom and additional space',
-        '+$200/person when shared.',
-        '+$400 when private',
-      ],
-    },
   },
 ]
 
