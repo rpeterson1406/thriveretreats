@@ -27,21 +27,28 @@ function AnnouncementBanner() {
 
   useEffect(() => {
     if (phase !== 'leaving') return
-    const fadeId = window.setTimeout(() => setPhase('gone'), FADE_MS)
+    const scrollX = window.scrollX
+    const scrollY = window.scrollY
+    const fadeId = window.setTimeout(() => {
+      setPhase('gone')
+      window.scrollTo(scrollX, scrollY)
+    }, FADE_MS)
     return () => window.clearTimeout(fadeId)
   }, [phase])
 
   function dismiss() {
+    const scrollX = window.scrollX
+    const scrollY = window.scrollY
     setPhase((current) => (current === 'open' ? 'leaving' : current))
+    // Keep the viewport where it is when the overlay unmounts.
+    requestAnimationFrame(() => {
+      window.scrollTo(scrollX, scrollY)
+    })
   }
 
   function handleExplore(event) {
     event.preventDefault()
     dismiss()
-    const target = document.getElementById('the-retreat')
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
   }
 
   if (phase === 'gone') return null
@@ -82,7 +89,7 @@ function AnnouncementBanner() {
           more intimate adventure through one of the most spectacular hiking
           destinations in the Southwest.
         </p>
-        <a className="announce__cta" href="#the-retreat" onClick={handleExplore}>
+        <a className="announce__cta" href="#hero" onClick={handleExplore}>
           Explore the Retreat
         </a>
       </div>
