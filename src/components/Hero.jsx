@@ -213,10 +213,6 @@ function Hero() {
             ♥
           </span>
         </p>
-
-        <a className="hero__scroll" href="#the-retreat" aria-label="Scroll to The Retreat">
-          <span aria-hidden="true">⌄</span>
-        </a>
       </div>
 
       <ul className="hero__features">
