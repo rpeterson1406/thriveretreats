@@ -13,9 +13,9 @@ const rooms = [
     tag: 'Traveling with a Friend?',
     title: 'King Suite',
     description:
-      'Share a spacious king room with a friend and enjoy the retreat experience together.',
+      'Share a spacious king bed and room with a friend and enjoy the retreat experience together.',
     details: [
-      { label: 'Bed', value: 'King shared with friend' },
+      { label: 'Bed', value: 'King' },
       { label: 'Bath', value: 'En-suite' },
       { label: 'Best for', value: 'Friends' },
     ],
@@ -55,7 +55,7 @@ const rooms = [
     description:
       'Our largest and our most spacious suite featuring amazing views and lavish en-suite bathroom.',
     details: [
-      { label: 'Bed', value: 'Private King' },
+      { label: 'Bed', value: 'King' },
       { label: 'Bath', value: 'En-suite' },
       { label: 'Best for', value: 'Spacious luxury' },
     ],
