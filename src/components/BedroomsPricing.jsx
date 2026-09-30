@@ -7,29 +7,11 @@ import './BedroomsPricing.css'
  */
 const rooms = [
   {
-    id: 'shared-queen',
-    image: '/images/bed_queen_shared.avif',
-    imageAlt: 'Shared Queen Suite bedroom',
-    tag: 'Most Popular for Solo Travelers',
-    title: 'Shared Queen Suite',
-    description:
-      'A comfortable private queen room within a shared suite — perfect for solo travelers who want their own space while still enjoying the connection of the retreat.',
-    details: [
-      { label: 'Bed', value: 'Your own Queen' },
-      { label: 'Bath', value: 'En-suite' },
-      { label: 'Best for', value: 'Solo travelers' },
-    ],
-    availability: 'Only 4 spots',
-    availabilityHighlight: true,
-    price: '$2,995',
-    featured: true,
-  },
-  {
     id: 'king-for-two',
-    image: '/images/bed_king_shared.avif',
-    imageAlt: 'King Suite for Two bedroom',
+    image: '/images/bed_king_private.avif',
+    imageAlt: 'Private King Suite bedroom',
     tag: 'Traveling with a Friend?',
-    title: 'King Suite for Two',
+    title: 'King Suite',
     description:
       'Share a spacious king room with a friend and enjoy the retreat experience together.',
     details: [
@@ -39,23 +21,37 @@ const rooms = [
     ],
     availability: 'Limited',
     availabilityHighlight: true,
-    price: '$3,195',
+    price: '$2,995',
     priceFrom: true,
     featured: false,
     upgrade: {
-      title: 'Premier Primary Suite Upgrade',
-      lines: [
-        'Our largest King suite features an expansive private bathroom and additional space',
-        '+$200/person when shared.',
-      ],
+      lines: ['+$1500 for single occupancy'],
     },
   },
   {
+    id: 'shared-queen',
+    image: '/images/bed_queen_shared.avif',
+    imageAlt: 'Shared Queen Suite bedroom',
+    tag: 'Most Popular for Solo Travelers',
+    title: 'Shared Queen Suite',
+    description:
+      'A comfortable private 2 queen bed room within a shared suite — perfect for solo travelers who want their own space while still enjoying the connection of the retreat.',
+    details: [
+      { label: 'Bed', value: 'Your own Queen' },
+      { label: 'Bath', value: 'En-suite' },
+      { label: 'Best for', value: 'Solo travelers' },
+    ],
+    availability: 'Only 4 spots',
+    availabilityHighlight: true,
+    price: '$3,195',
+    featured: true,
+  },
+  {
     id: 'private-king',
-    image: '/images/bed_king_private.avif',
-    imageAlt: 'Private King Suite bedroom',
+    image: '/images/bed_king_shared.avif',
+    imageAlt: 'King Suite for Two bedroom',
     tag: 'Most Private',
-    title: 'Private King Suite',
+    title: 'Primary King Suite',
     description:
       'Your own private king suite for the most spacious and private THRIVE retreat experience.',
     details: [
@@ -65,9 +61,15 @@ const rooms = [
     ],
     availability: 'Limited',
     availabilityHighlight: true,
-    price: '$4,495',
+    price: '$3,295',
     priceFrom: true,
     featured: false,
+    upgrade: {
+      title: 'Premier Primary Suite Upgrade',
+      lines: [
+        'Our largest King suite features an expansive private bathroom and additional space',
+      ],
+    },
   },
 ]
 
@@ -162,9 +164,11 @@ function BedroomsPricing() {
                 >
                   {room.upgrade ? (
                     <>
-                      <p className="pricing__upgrade-title">
-                        {room.upgrade.title}
-                      </p>
+                      {room.upgrade.title ? (
+                        <p className="pricing__upgrade-title">
+                          {room.upgrade.title}
+                        </p>
+                      ) : null}
                       {room.upgrade.lines.map((line) => (
                         <p key={line} className="pricing__upgrade-line">
                           {line}
