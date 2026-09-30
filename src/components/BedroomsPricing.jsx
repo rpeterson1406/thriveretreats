@@ -53,16 +53,15 @@ const rooms = [
     tag: 'Most spacious and luxurious',
     title: 'Primary King Suite',
     description:
-      'Our largest and our most spacious suite featuring amazing views and lavish en-suite bathroom',
+      'Our largest and our most spacious suite featuring amazing views and lavish en-suite bathroom.',
     details: [
       { label: 'Bed', value: 'Private King' },
       { label: 'Bath', value: 'En-suite' },
-      { label: 'Best for', value: 'Maximum privacy' },
+      { label: 'Best for', value: 'Spacious luxury' },
     ],
     availability: 'Limited',
     availabilityHighlight: true,
     price: '$3,295',
-    priceFrom: true,
     featured: false,
     upgrade: {
       title: 'Premier Primary Suite Upgrade',
