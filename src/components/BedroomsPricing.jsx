@@ -32,7 +32,7 @@ const rooms = [
     id: 'shared-queen',
     image: '/images/bed_queen_shared.avif',
     imageAlt: 'Shared Queen Suite bedroom',
-    tag: 'Most Popular for Solo Travelers',
+    tag: 'Popular with solo travelers',
     title: 'Shared Queen Suite',
     description:
       'A comfortable private 2 queen bed room within a shared suite — perfect for solo travelers who want their own space while still enjoying the connection of the retreat.',
@@ -50,10 +50,10 @@ const rooms = [
     id: 'private-king',
     image: '/images/bed_king_shared.avif',
     imageAlt: 'King Suite for Two bedroom',
-    tag: 'Most Private',
+    tag: 'Most spacious and luxurious',
     title: 'Primary King Suite',
     description:
-      'Your own private king suite for the most spacious and private THRIVE retreat experience.',
+      'Our largest and our most spacious suite featuring amazing views and lavish en-suite bathroom',
     details: [
       { label: 'Bed', value: 'Private King' },
       { label: 'Bath', value: 'En-suite' },
@@ -66,9 +66,7 @@ const rooms = [
     featured: false,
     upgrade: {
       title: 'Premier Primary Suite Upgrade',
-      lines: [
-        'Our largest King suite features an expansive private bathroom and additional space',
-      ],
+      lines: [],
     },
   },
 ]
