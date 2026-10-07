@@ -123,16 +123,14 @@ function BedroomsPricing() {
                   </div>
                 )}
                 <span className="pricing__tag">{room.tag}</span>
+                {room.soldOut ? (
+                  <p className="pricing__sold-out">SOLD OUT</p>
+                ) : null}
               </div>
 
               <div className="pricing__body">
                 <h3 className="pricing__room-title">{room.title}</h3>
-                <div className="pricing__description-wrap">
-                  <p className="pricing__description">{room.description}</p>
-                  {room.soldOut ? (
-                    <p className="pricing__sold-out">SOLD OUT</p>
-                  ) : null}
-                </div>
+                <p className="pricing__description">{room.description}</p>
 
                 <ul className="pricing__details">
                   {room.details.map((detail) => (

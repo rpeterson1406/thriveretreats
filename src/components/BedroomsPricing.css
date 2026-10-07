@@ -75,6 +75,7 @@
   position: relative;
   flex: 0 0 auto;
   aspect-ratio: 4 / 3;
+  overflow: hidden;
   background: #efe6dc;
 }
 
@@ -143,13 +144,8 @@
   line-height: 1.25;
 }
 
-.pricing__description-wrap {
-  position: relative;
-  margin: 0 0 1.15rem;
-}
-
 .pricing__description {
-  margin: 0;
+  margin: 0 0 1.15rem;
   color: #4a4a4a;
   font-family: var(--font-sans);
   font-size: 0.92rem;
@@ -159,20 +155,21 @@
 
 .pricing__sold-out {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
   margin: 0;
-  color: #111;
+  padding: 0.04em 0.22em 0.08em;
+  background: #fff;
+  color: var(--pink);
   font-family: var(--font-serif);
-  font-size: 2.35rem;
+  font-size: 3.525rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  line-height: 0.85;
+  line-height: 0.9;
   text-transform: uppercase;
   white-space: nowrap;
-  transform: rotate(-8deg);
+  transform: translate(-50%, -50%) rotate(-8deg);
   pointer-events: none;
 }
 
