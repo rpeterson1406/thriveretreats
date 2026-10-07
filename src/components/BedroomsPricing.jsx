@@ -63,6 +63,7 @@ const rooms = [
     availabilityHighlight: true,
     price: '$3,295',
     featured: false,
+    soldOut: true,
     upgrade: {
       title: 'Premier Primary Suite Upgrade',
       lines: [],
@@ -126,7 +127,12 @@ function BedroomsPricing() {
 
               <div className="pricing__body">
                 <h3 className="pricing__room-title">{room.title}</h3>
-                <p className="pricing__description">{room.description}</p>
+                <div className="pricing__description-wrap">
+                  <p className="pricing__description">{room.description}</p>
+                  {room.soldOut ? (
+                    <p className="pricing__sold-out">SOLD OUT</p>
+                  ) : null}
+                </div>
 
                 <ul className="pricing__details">
                   {room.details.map((detail) => (
