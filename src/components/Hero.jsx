@@ -207,12 +207,7 @@ function Hero() {
           </div>
         </div>
 
-        <p className="hero__side-script">
-          Explore &amp; Restore
-          <span className="hero__heart" aria-hidden="true">
-            ♥
-          </span>
-        </p>
+        <p className="hero__side-script">Explore &amp; Restore</p>
       </div>
 
       <ul className="hero__features">

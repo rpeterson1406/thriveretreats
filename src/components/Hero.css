@@ -245,7 +245,7 @@
 .hero__side-script {
   position: absolute;
   left: clamp(1.25rem, 4vw, 3rem);
-  bottom: clamp(1.25rem, 4vw, 3rem);
+  bottom: 0.15rem;
   z-index: 1;
   margin: 0;
   color: var(--pink);
@@ -257,16 +257,6 @@
   text-shadow:
     0 1px 0 rgba(253, 248, 243, 0.75),
     0 0 12px rgba(253, 248, 243, 0.5);
-}
-
-.hero__heart {
-  display: block;
-  margin-top: 0.15rem;
-  color: var(--pink);
-  font-family: Georgia, serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-align: left;
 }
 
 .hero__scroll {
