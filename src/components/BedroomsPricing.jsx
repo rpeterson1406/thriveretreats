@@ -63,7 +63,6 @@ const rooms = [
     availabilityHighlight: true,
     price: '$3,295',
     featured: false,
-    soldOut: true,
     upgrade: {
       title: 'Premier Primary Suite Upgrade',
       lines: [],
@@ -123,9 +122,6 @@ function BedroomsPricing() {
                   </div>
                 )}
                 <span className="pricing__tag">{room.tag}</span>
-                {room.soldOut ? (
-                  <p className="pricing__sold-out">SOLD OUT</p>
-                ) : null}
               </div>
 
               <div className="pricing__body">

@@ -153,26 +153,6 @@
   line-height: 1.65;
 }
 
-.pricing__sold-out {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  margin: 0;
-  padding: 0.04em 0.22em 0.08em;
-  background: #fff;
-  color: var(--pink);
-  font-family: var(--font-serif);
-  font-size: 3.525rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  line-height: 0.9;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transform: translate(-50%, -50%) rotate(-8deg);
-  pointer-events: none;
-}
-
 .pricing__details {
   margin: 0 0 1rem;
   padding: 0;

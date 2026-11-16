@@ -1,4 +1,3 @@
-import AnnouncementBanner from '../components/AnnouncementBanner'
 import Hero from '../components/Hero'
 import TheRetreat from '../components/TheRetreat'
 import Itinerary from '../components/Itinerary'
@@ -16,21 +15,18 @@ import '../App.css'
  */
 function TucsonRetreatPage() {
   return (
-    <>
-      <AnnouncementBanner />
-      <main className="page">
-        <Hero />
-        <TheRetreat />
-        <Itinerary />
-        <ThoughtfullyDesigned />
-        <Leaders />
-        <Accommodations />
-        <BedroomsPricing />
-        <FAQ />
-        <FinalCTA />
-        <Footer />
-      </main>
-    </>
+    <main className="page">
+      <Hero />
+      <TheRetreat />
+      <Itinerary />
+      <ThoughtfullyDesigned />
+      <Leaders />
+      <Accommodations />
+      <BedroomsPricing />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+    </main>
   )
 }
 
